@@ -367,8 +367,10 @@ e = gg.prompt({
 "• FAST SCOPE",
 "• NO PARACHUTE",
 "• LONG SLIDE",
+"• ESP NAME BR",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -394,7 +396,8 @@ if e[7] == true then art() end
 if e[8] == true then scope() end
 if e[9] == true then nopara() end
 if e[10] == true then slide() end
-if e[11] == true then home() end
+if e[11] == true then esp() end
+if e[12] == true then home() end
 end
 end
 
@@ -479,6 +482,13 @@ local py = 0x8DD2B6C
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("LONG SLIDE ACTIVATED")
 end
+
+function esp()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x48487DC
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6")
+gg.toast("ESP NAME BR ACTIVATED")
+      end
 
 function EXIT()
 gg.toast("sᴄʀɪᴘᴛ ᴛᴇʀᴍɪɴᴀᴛᴇᴅ")

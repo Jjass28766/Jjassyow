@@ -393,7 +393,7 @@ if e[6] == true then sky() end
 if e[7] == true then art() end
 if e[8] == true then scope() end
 if e[9] == true then nopara() end
-if e[10] == true then slide()
+if e[10] == true then slide() end
 if e[11] == true then home() end
 end
 end

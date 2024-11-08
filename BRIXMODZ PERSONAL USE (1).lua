@@ -421,7 +421,10 @@ gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h 1F 20 03 D5 
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x7B18098
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value =  "h200080D2C0035FD6"}})
-gg.toast("WALLHACK RED/YELLOW/BLUE ACTIVATED")
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x4A48B10
+gg.setValues({{address = so + py, flags = "h200080D2C0035FD6"}})
+gg.toast("WALLHACK RED/YELLOW/BLUE/OUTLINE ACTIVATED")
 end
 
 function nah()
@@ -486,9 +489,9 @@ end
 function esp()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x48487DC
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6")
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("ESP NAME BR ACTIVATED")
-      end
+end
 
 function EXIT()
 gg.toast("sᴄʀɪᴘᴛ ᴛᴇʀᴍɪɴᴀᴛᴇᴅ")

@@ -478,7 +478,7 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x8DD2B6C
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("LONG SLIDE ACTIVATED")
-      end
+end
 
 function EXIT()
 gg.toast("sᴄʀɪᴘᴛ ᴛᴇʀᴍɪɴᴀᴛᴇᴅ")

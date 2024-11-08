@@ -366,8 +366,10 @@ e = gg.prompt({
 "• FPS BOOSTER",
 "• FAST SCOPE",
 "• NO PARACHUTE",
+"• LONG SLIDE",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -391,7 +393,8 @@ if e[6] == true then sky() end
 if e[7] == true then art() end
 if e[8] == true then scope() end
 if e[9] == true then nopara() end
-if e[7] == true then home() end
+if e[10] == true then slide()
+if e[11] == true then home() end
 end
 end
 
@@ -469,7 +472,13 @@ function nopara()
   gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
   gg.toast("NO PARACHUTE ACTIVATED")
   end
- 
+
+function slide()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x8DD2B6C
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+gg.toast("LONG SLIDE ACTIVATED")
+      end
 
 function EXIT()
 gg.toast("sᴄʀɪᴘᴛ ᴛᴇʀᴍɪɴᴀᴛᴇᴅ")

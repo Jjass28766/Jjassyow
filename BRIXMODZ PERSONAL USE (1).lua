@@ -369,8 +369,10 @@ e = gg.prompt({
 "• LONG SLIDE",
 "• ESP NAME BR",
 "• UNLI CURRENT AMMO",
+"• SPEEDWALK",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -400,6 +402,7 @@ if e[9] == true then nopara() end
 if e[10] == true then slide() end
 if e[11] == true then esp() end
 if e[12] == true then current() end
+if e[13] == true then speed() end
 if e[13] == true then home() end
 end
 end
@@ -504,6 +507,13 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x5638A1C
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("UNLI CURRENT AMMO")
+end
+
+function speed()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x80EFE74
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+gg.toast("SPEEDWALK ACTIVATED")
 end
 
 function EXIT()

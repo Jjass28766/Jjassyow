@@ -368,8 +368,10 @@ e = gg.prompt({
 "• NO PARACHUTE",
 "• LONG SLIDE",
 "• ESP NAME BR",
+"• UNLI CURRENT AMMO",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -397,7 +399,8 @@ if e[8] == true then scope() end
 if e[9] == true then nopara() end
 if e[10] == true then slide() end
 if e[11] == true then esp() end
-if e[12] == true then home() end
+if e[12] == true then current() end
+if e[13] == true then home() end
 end
 end
 
@@ -494,6 +497,13 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x48487DC
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("ESP NAME BR ACTIVATED")
+end
+
+function current()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x5638A1C
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+gg.toast("UNLI CURRENT AMMO")
 end
 
 function EXIT()

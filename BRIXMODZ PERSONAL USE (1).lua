@@ -372,8 +372,10 @@ e = gg.prompt({
 "• SPEEDWALK",
 "• RAPID FIRE",
 "• FAST SWIM",
+"• AIM SMALL CROSSHAIR",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -409,7 +411,8 @@ if e[12] == true then current() end
 if e[13] == true then speed() end
 if e[14] == true then rapid() end
 if e[15] == true then fastswim() end
-if e[16] == true then home() end
+if e[16] == true then aimsmall() end
+if e[17] == true then home() end
 end
 end
 
@@ -534,6 +537,19 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x81E158C
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
 gg.toast("FAST SWIM ACTIVATED")
+end
+
+function aimsmall()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x91327F8
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6)
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x91328E8
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6)
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x49E31D4
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6)
+gg.toast("AIM WITH CROSSHAIR ACTIVATED")
 end
 
 function EXIT()

@@ -542,13 +542,13 @@ end
 function aimsmall()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x91327F8
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6)
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x91328E8
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6)
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x49E31D4
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6)
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("AIM WITH CROSSHAIR ACTIVATED")
 end
 

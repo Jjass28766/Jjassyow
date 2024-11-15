@@ -258,7 +258,7 @@ e = gg.prompt({
 "• NO PARACHUTE",
 "• LONG SLIDE",
 "• ESP NAME BR",
-"• UNLI CURRENT AMMO",
+"• UNLI AMMO",
 "• SPEEDWALK",
 "• RAPID FIRE",
 "• FAST SWIM",
@@ -404,6 +404,9 @@ end
 function current()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x5638A1C
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x56389E0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("UNLI CURRENT AMMO")
 end

@@ -264,8 +264,10 @@ e = gg.prompt({
 "• FAST SWIM",
 "• AIM SMALL CROSSHAIR",
 "• INFINITE SLIDE",
+"• SPAM JUMP",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -305,7 +307,8 @@ if e[14] == true then rapid() end
 if e[15] == true then fastswim() end
 if e[16] == true then aimsmall() end
 if e[17] == true then infinite() end
-if e[18] == true then home() end
+if e[18] == true then spam() end
+if e[19] == true then home() end
 end
 end
 
@@ -453,6 +456,13 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x8DD2CA0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("INFINITE SLIDE ACTIVATED")
+end
+
+function spam()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x80D8698
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+gg.toast("SPAM JUMP ACTIVATED")
 end
 
 function EXIT()

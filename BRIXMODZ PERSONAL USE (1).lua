@@ -263,8 +263,10 @@ e = gg.prompt({
 "• RAPID FIRE",
 "• FAST SWIM",
 "• AIM SMALL CROSSHAIR",
+"• INFINITE SLIDE",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -302,7 +304,8 @@ if e[13] == true then speed() end
 if e[14] == true then rapid() end
 if e[15] == true then fastswim() end
 if e[16] == true then aimsmall() end
-if e[17] == true then home() end
+if e[17] == true then infinite() end
+if e[18] == true then home() end
 end
 end
 
@@ -443,6 +446,13 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x49E31D4
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("AIM WITH CROSSHAIR ACTIVATED")
+end
+
+function infinite()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x8DD2CA0
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+gg.toast("INFINITE SLIDE ACTIVATED")
 end
 
 function EXIT()

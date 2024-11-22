@@ -272,8 +272,10 @@ e = gg.prompt({
 "• BUFF DAMAGE",
 "• INSTANT FIRE",
 "• EXTENDED WEAPON RANGE",
+"• NO SHAKE",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -323,7 +325,8 @@ if e[19] == true then sw() end
 if e[20] == true then buff() end
 if e[21] == true then instant() end
 if e[22] == true then extended() end
-if e[23] == true then home() end
+if e[23] == true then shake() end
+if e[24] == true then home() end
 end
 end
 
@@ -506,6 +509,13 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x8FC39D0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}}) 
 gg.toast("EXTENDED WEAPON RANGE ACTIVATED")
+end
+
+function shake()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x7ACFAA0
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}}) 
+gg.toast("NO SHAKE ACTIVATED")
 end
 
 function EXIT()

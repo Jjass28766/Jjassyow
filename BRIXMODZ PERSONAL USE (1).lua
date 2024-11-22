@@ -270,8 +270,10 @@ e = gg.prompt({
 "• SPAM JUMP",
 "• FAST SWITCH",
 "• BUFF DAMAGE",
+"• INSTANT FIRE",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -317,6 +319,7 @@ if e[17] == true then infinite() end
 if e[18] == true then spam() end
 if e[19] == true then sw() end
 if e[20] == true then buff() end
+if e[21] == true then instant() end
 if e[21] == true then home() end
 end
 end
@@ -483,6 +486,16 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x9102C30
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("BUFF DAMAGE ACTIVATED")
+end
+
+function instant()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x8FF9E8C
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+ local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x90F9F14
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+gg.toast("INSTANT FIRE ACTIVATED")
 end
 
 function EXIT()

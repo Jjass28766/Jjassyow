@@ -504,7 +504,8 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x5603434
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("LONG EXECUTION ACTIVATED")
- 
+end
+
 function EXIT()
 gg.toast("sᴄʀɪᴘᴛ ᴛᴇʀᴍɪɴᴀᴛᴇᴅ")
 os.exit() 

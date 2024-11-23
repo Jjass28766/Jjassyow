@@ -271,8 +271,10 @@ e = gg.prompt({
 "• FAST SWITCH",
 "• BUFF DAMAGE",
 "• NO SHAKE",
+"• LONG EXECUTION",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -321,7 +323,8 @@ if e[18] == true then spam() end
 if e[19] == true then sw() end
 if e[20] == true then buff() end
 if e[21] == true then shake() end
-if e[22] == true then home() end
+if e[22] == true then execution() end
+if e[23] == true then home() end
 end
 end
 
@@ -496,6 +499,12 @@ gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035
 gg.toast("NO SHAKE ACTIVATED")
 end
 
+function execution()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x5603434
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+gg.toast("LONG EXECUTION ACTIVATED")
+ 
 function EXIT()
 gg.toast("sᴄʀɪᴘᴛ ᴛᴇʀᴍɪɴᴀᴛᴇᴅ")
 os.exit() 

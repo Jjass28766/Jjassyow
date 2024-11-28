@@ -289,13 +289,13 @@ e = gg.prompt({
     "checkbox",
     })
 if e == nil then else
-if e[1] == true then whs() end
-if e[2] == true then redwh() end
-if e[3] == true then nah() end
-if e[4] == true then line() end
-if e[5] == true then antenna() end
-if e[6] == true then sky() end
-if e[7] == true then art() end
+if e[1] == true then aimall() end
+if e[2] == true then wall() end
+if e[3] == true then reload() end
+if e[4] == true then box() end
+if e[5] == true then box2() end
+if e[6] == true then box3() end
+if e[7] == true then box4() end
 if e[8] == true then scope() end
 if e[9] == true then nopara() end
 if e[10] == true then slide() end
@@ -315,7 +315,7 @@ if e[23] == true then home() end
 end
 end
 
-function whs()
+function aimall()
 aimbot = gg.prompt({"ᴀɪᴍ ʟᴏᴄᴋ ᴀᴅᴊᴜsᴛ sᴇᴛᴛɪɴɢs [1; 1000]"}, nil, {"number"})
 unity = gg.getRangesList("libunity.so")[1].start 
 setValues(unity + 0x8FE4058, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
@@ -328,7 +328,7 @@ setValues(unity + 0x7AED9F8 + 8, 16, aimbot[1])
 gg.toast("AIMBOT ALL GUNS ACTIVATED")
 end
 
-function redwh()
+function wall()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x81B7858
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h 1F 20 03 D5 E0 03 13 AA"}})
@@ -341,35 +341,35 @@ gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035
 gg.toast("WALLHACK RED/YELLOW/BLUE/OUTLINE ACTIVATED")
 end
 
-function nah()
+function reload()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x913A6C0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("NO SPREAD ACTIVATED")
 end
 
-function line()
+function box()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x8FC2374
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h002C40BCC0035FD6"}})
 gg.toast("NO RELOAD ACTIVATED")
 end
 
-function antenna()
+function box2()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x9135178
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("EXPANDED HITBOX ACTIVATED'")
 end
 
-function sky()
+function box3()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x913BFB0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h204C40BCC0035FD6"}})
 gg.toast("NO RECOIL ACTIVATED")
 end
 
-function art()
+function box4()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x7BB235C
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h002480D2C0035FD6"}})

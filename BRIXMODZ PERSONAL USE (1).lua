@@ -426,7 +426,7 @@ end
 
 function rapid()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x90C17BC
+local py = 0x90F9F14
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("RAPID FIRE ACTIVATED")
 end

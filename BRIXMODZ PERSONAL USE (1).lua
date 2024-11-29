@@ -1684,7 +1684,8 @@ var = gg.getResults(1000)
 gg.editAll("3.567891011",gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("FLY HACK ACTIVATED")
-			end
+end
+			
 function A4() 
 
 q = gg.choice({

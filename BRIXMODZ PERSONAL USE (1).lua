@@ -524,10 +524,12 @@ e = gg.prompt({
 "• STATIC HITBOX [IN-GAME]",
 "• WALL CLIMB [IN-GAME]",
 "• NO SMOKE [IN-GAME]",
-"• BIG BODY ENEMY [IN-GAME",
-"• UNLI PUMP",
+"• BIG BODY ENEMY [IN-GAME]",
+"• UNLI PUMP [IN-GAME]",
+"• FLY HACK [IN-GAME]",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -589,7 +591,8 @@ if e[25] == true then wallclimb() end
 if e[26] == true then nosmoke() end
 if e[27] == true then bigbody() end
 if e[28] == true then unlipump() end
-if e[29] == true then home() end
+if e[29] == true then flyhack() end
+if e[30] == true then home() end
 end
 end
 
@@ -1666,8 +1669,22 @@ gg.getResults(9999)
 gg.editAll("4,692,750,814,937,088,000", gg.TYPE_QWORD)
 gg.clearResults()
 gg.toast("UNLI PUMP ACTIVATED")
-end
-
+			end
+function flyhack()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("20.567891011", gg.TYPE_FLOAT)
+gg.searchNumber("20.567891011",gg.TYPE_FLOAT,false,gg.SIGN_FUZZY_EQUAL,0,-1)
+var = gg.getResults(1000)
+gg.editAll("0.25",gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("0.05;0.25;0.4999999702:9", gg.TYPE_FLOAT)
+gg.searchNumber("0.05",gg.TYPE_FLOAT,false,gg.SIGN_FUZZY_EQUAL,0,-1)
+var = gg.getResults(1000)
+gg.editAll("3.567891011",gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("FLY HACK ACTIVATED")
+			end
 function A4() 
 
 q = gg.choice({

@@ -1209,7 +1209,7 @@ end
 
 
 function aim()
-aimbot = gg.prompt({"ᴀɪᴍ ʟᴏᴄᴋ ᴀᴅᴊᴜsᴛ sᴇᴛᴛɪɴɢs [1; 1000]"}, nil, {"number"})
+aimbot = gg.prompt({"ᴀɪᴍ ʟᴏᴄᴋ ᴀᴅᴊᴜsᴛ sᴇᴛᴛɪɴɢs [1; 1000000]"}, nil, {"number"})
 unity = gg.getRangesList("libunity.so")[1].start 
 setValues(unity + 0x8FE4058, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
 setValues(unity + 0x8FE4058 + 4, 4, "~A8 RET")

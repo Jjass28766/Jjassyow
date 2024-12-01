@@ -291,7 +291,7 @@ e = gg.prompt({
 if e == nil then else
 if e[1] == true then aimall() end
 if e[2] == true then wall() end
-if e[3] == true then reload() end
+if e[3] == true then spread() end
 if e[4] == true then box() end
 if e[5] == true then box2() end
 if e[6] == true then box3() end
@@ -341,7 +341,7 @@ gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035
 gg.toast("WALLHACK RED/YELLOW/BLUE/OUTLINE ACTIVATED")
 end
 
-function reload()
+function spread()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x913A6C0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})

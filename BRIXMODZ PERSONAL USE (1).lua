@@ -343,9 +343,10 @@ gg.toast("WALLHACK RED/YELLOW/BLUE/OUTLINE ACTIVATED")
 end
 
 function spread()
-local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x913A6C0
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+unity = gg.getRangesList("libunity.so")[1].start 
+setValues(unity + 0x913A6C0, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x913A6C0 + 4, 4, "~A8 RET")
+setValues(unity + 0x913A6C0 + 8, 16, -1)
 gg.toast("NO SPREAD ACTIVATED")
 end
 

@@ -259,6 +259,7 @@ e = gg.prompt({
 "• BUFF DAMAGE",
 "• NO SHAKE",
 "• LONG EXECUTION",
+"• EXTENDED RANGE",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
     "checkbox",

@@ -425,9 +425,10 @@ gg.toast("SPEEDWALK ACTIVATED")
 end
 
 function rapid()
-local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x90C17BC
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+unity = gg.getRangesList("libunity.so")[1].start 
+setValues(unity + 0x90C17BC, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x90C17BC + 4, 4, "~A8 RET")
+setValues(unity + 0x90C17BC + 8, 16, 10)
 gg.toast("RAPID FIRE ACTIVATED")
 end
    

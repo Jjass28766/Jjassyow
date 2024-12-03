@@ -311,7 +311,8 @@ if e[19] == true then sw() end
 if e[20] == true then buff() end
 if e[21] == true then shake() end
 if e[22] == true then execution() end
-if e[23] == true then home() end
+if e[23] == true then weaprange() end
+if e[24] == true then home() end
 end
 end
 
@@ -492,6 +493,14 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x5603434
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("LONG EXECUTION ACTIVATED")
+end
+
+function weaprange()
+unity = gg.getRangesList("libunity.so")[1].start 
+setValues(unity + 0x8FC39D0, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x8FC39D0 + 4, 4, "~A8 RET")
+setValues(unity + 0x8FC39D0 + 8, 16, 10)
+gg.toast("EXTENDED RANGE ACTIVATED")
 end
 
 function A3() 

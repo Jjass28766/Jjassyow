@@ -470,9 +470,10 @@ gg.toast("SPAM JUMP ACTIVATED")
 end
 
 function sw()
-local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x8E402C8
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+unity = gg.getRangesList("libunity.so")[1].start 
+setValues(unity + 0x8E402C8, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x8E402C8 + 4, 4, "~A8 RET")
+setValues(unity + 0x8E402C8 + 8, 16, 0)
 gg.toast("FAST SWITCH ACTIVATED")
 end
 

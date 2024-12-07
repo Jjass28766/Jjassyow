@@ -1427,9 +1427,6 @@ end
 
 
 function shot()
-local wallShots = gg.choice({"ꜰᴍᴊ ᴡᴀʟʟꜱʜᴏᴛ", "ᴡᴀʟʟꜱʜᴏᴛ", "ʙᴀᴄᴋ"}, nil, "ꜱᴇʟᴇᴄᴛ ᴏᴘᴛɪᴏɴꜱ")
-if wallShots then
-if wallShots == 1 then
 gg.setRanges(gg.REGION_C_BSS)
 gg.setVisible(false)
 gg.searchNumber("4,611,686,019,501,129,728", gg.TYPE_QWORD)
@@ -1479,7 +1476,6 @@ gg.refineNumber("4,683,734,607,009,413,071", gg.TYPE_QWORD)
 gg.getResults(9999999)
 gg.editAll("0", gg.TYPE_QWORD)
 gg.clearResults()
-elseif wallShots == 2 then
 gg.setRanges(gg.REGION_C_BSS)
 gg.setVisible(false)
 gg.searchNumber("2", gg.TYPE_DWORD)
@@ -1487,10 +1483,7 @@ gg.refineNumber("-999", gg.TYPE_DWORD)
 gg.getResults(9999999)
 gg.clearResults()
 gg.editAll("0", gg.TYPE_QWORD)
-elseif wallShots == 3 then 
-home()
-end
-end
+gg.toast("WALL SHOT ACTIVATED")
 end
 
 function wallhack()

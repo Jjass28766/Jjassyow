@@ -492,8 +492,21 @@ gg.toast("NO SHAKE ACTIVATED")
 end
 
 function execution()
-local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x5603434
+local Lib = gg.getRangesList("libunity.so") 
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x56029A4 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x56017B4 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x5603434 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x55FF848 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x550547C 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("LONG EXECUTION ACTIVATED")
 end

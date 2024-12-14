@@ -223,13 +223,6 @@ HexPatches.BrixMODZ("libanogs.so", 0x242B58, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x2442C8, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x2F40F5, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x271344, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x9183C93, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x4B800C9, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x1B096A5, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x776F71E, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x3142D05, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x9A3ECEF, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x22995CD, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x1749A8, "h 00 00 80 D2 C0 03 5F D6", 32);
 gg.toast("BYPASS AND ANTI CRASH ACTIVATED")
 end
@@ -360,11 +353,8 @@ end
 
 function box()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x90FB440
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h002C40BCC0035FD6"}})
-local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x90FB74C
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h002080D2C0035FD6"}})
+local py = 0x8FC2374
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("NO RELOAD ACTIVATED")
 end
 

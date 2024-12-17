@@ -211,6 +211,13 @@ end
 
 
 function lobby()
+HexPatches.BrixMODZ("libanort.so", 0x3C28, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanort.so", 0x6E93, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanort.so", 0x95FB, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanort.so", 0x6C38, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanort.so", 0x2E4F, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanort.so", 0x8DFC, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanort.so", 0x26F7, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libunity.so", 0x4F81446, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libunity.so", 0x24085CF, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libunity.so", 0x5428226, "h 00 00 80 D2 C0 03 5F D6", 32);

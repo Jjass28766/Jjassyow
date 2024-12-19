@@ -832,6 +832,36 @@ if speedmenubar == 35 then
 gg.getResults(999)
 gg.editAll("35", gg.TYPE_FLOAT)
 gg.clearResults()
+end 
+else
+if speedmenubar == 36 then
+gg.getResults(999)
+gg.editAll("36", gg.TYPE_FLOAT)
+gg.clearResults()
+else
+end
+if speedmenubar == 37 then
+gg.getResults(999)
+gg.editAll("37", gg.TYPE_FLOAT)
+gg.clearResults()
+else
+end
+if speedmenubar == 38 then
+gg.getResults(999)
+gg.editAll("38", gg.TYPE_FLOAT)
+gg.clearResults()
+else
+end
+if speedmenubar == 39 then
+gg.getResults(999)
+gg.editAll("39", gg.TYPE_FLOAT)
+gg.clearResults()
+else
+end
+if speedmenubar == 40 then
+gg.getResults(999)
+gg.editAll("40", gg.TYPE_FLOAT)
+gg.clearResults()
 gg.toast("SPEED HACK ACTIVATED")
 end
 end

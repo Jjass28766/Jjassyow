@@ -643,7 +643,7 @@ end
 
 function redwh()
 gg.setRanges(gg.REGION_ANONYMOUS)
-V=gg.prompt({"🏃??sᴇᴛ sᴘᴇᴇᴅ ᴛᴏ🏃🏻‍♀[1;40]"},{Y},{"number"}) 
+V=gg.prompt({"🏃??sᴇᴛ sᴘᴇᴇᴅ ᴛᴏ🏃🏻‍♀[1;35]"},{Y},{"number"}) 
 for i = 1,5 do gg.sleep(100) gg.setVisible(false) gg.toast("Starting SpeedHack: "..V[1]) end
 if V[2] == true then
 gg.searchNumber("4.28000020981;3.20000004768", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
@@ -831,36 +831,6 @@ end
 if speedmenubar == 35 then
 gg.getResults(999)
 gg.editAll("35", gg.TYPE_FLOAT)
-gg.clearResults()
-end 
-else
-if speedmenubar == 36 then
-gg.getResults(999)
-gg.editAll("36", gg.TYPE_FLOAT)
-gg.clearResults()
-else
-end
-if speedmenubar == 37 then
-gg.getResults(999)
-gg.editAll("37", gg.TYPE_FLOAT)
-gg.clearResults()
-else
-end
-if speedmenubar == 38 then
-gg.getResults(999)
-gg.editAll("38", gg.TYPE_FLOAT)
-gg.clearResults()
-else
-end
-if speedmenubar == 39 then
-gg.getResults(999)
-gg.editAll("39", gg.TYPE_FLOAT)
-gg.clearResults()
-else
-end
-if speedmenubar == 40 then
-gg.getResults(999)
-gg.editAll("40", gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("SPEED HACK ACTIVATED")
 end

@@ -227,7 +227,7 @@ HexPatches.BrixMODZ("libanogs.so", 0x2442C8, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x2B3BCB, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x1749A8, "h 00 00 80 D2 C0 03 5F D6", 32);
 gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("report", gg.TYPE_UTF8)
+gg.searchNumber("report;_report;_report:", gg.TYPE_UTF8)
 gg.getResults(9999)
 gg.editAll("0", gg.TYPE_BYTE)
 gg.clearResults()

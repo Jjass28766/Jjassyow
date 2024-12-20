@@ -643,7 +643,7 @@ end
 
 function redwh()
 gg.setRanges(gg.REGION_ANONYMOUS)
-V=gg.prompt({"🏃??sᴇᴛ sᴘᴇᴇᴅ ᴛᴏ🏃🏻‍♀[1;35]"},{Y},{"number"}) 
+V=gg.prompt({"🏃??sᴇᴛ sᴘᴇᴇᴅ ᴛᴏ🏃🏻‍♀[1;40]"},{Y},{"number"}) 
 for i = 1,5 do gg.sleep(100) gg.setVisible(false) gg.toast("Starting SpeedHack: "..V[1]) end
 if V[2] == true then
 gg.searchNumber("4.28000020981;3.20000004768", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)

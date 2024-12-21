@@ -262,8 +262,10 @@ e = gg.prompt({
 "• NO SHAKE",
 "• LONG EXECUTION",
 "• EXTENDED RANGE",
+"• SNOWBOARD SPEED",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -315,6 +317,7 @@ if e[20] == true then buff() end
 if e[21] == true then shake() end
 if e[22] == true then execution() end
 if e[23] == true then weaprange() end
+if e[24] == true then snowspeed() end
 if e[24] == true then home() end
 end
 end
@@ -519,6 +522,16 @@ setValues(unity + 0x8FC39D0, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
 setValues(unity + 0x8FC39D0 + 4, 4, "~A8 RET")
 setValues(unity + 0x8FC39D0 + 8, 16, 10)
 gg.toast("EXTENDED RANGE ACTIVATED")
+end
+
+function snowspeed()
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x80DD184
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h4000001CC0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x80DD18C
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h0000A041F30300AA"}})
+gg.toast("SNOWBOARD SPEED ACTIVATED")
 end
 
 function A3() 

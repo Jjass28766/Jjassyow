@@ -318,7 +318,7 @@ if e[21] == true then shake() end
 if e[22] == true then execution() end
 if e[23] == true then weaprange() end
 if e[24] == true then snowspeed() end
-if e[24] == true then home() end
+if e[25] == true then home() end
 end
 end
 

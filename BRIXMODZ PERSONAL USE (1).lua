@@ -246,6 +246,16 @@ HexPatches.BrixMODZ("libMSDKCore.so", 0xD55492, "h 00 00 80 D2 C0 03 5F D6", 32)
 HexPatches.BrixMODZ("libMSDKCore.so", 0x92FA9B, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libMSDKCore.so", 0x44A7FD, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libMSDKCore.so", 0x66A5AA, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0xE8159, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0xDA389, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0x97CEA, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0xCB1B2, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0xDCFCE, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0xDC2F6, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0xC05B0, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0x58785, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0x67C8D, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libgcloudcore.so", 0xD684E, "h 00 00 80 D2 C0 03 5F D6", 32);
 gg.toast("BYPASS AND ANTI CRASH ACTIVATED")
 end
 

@@ -226,12 +226,6 @@ HexPatches.BrixMODZ("libanogs.so", 0x242B58, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x2442C8, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x2B3BCB, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x1749A8, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libMSDKCore.so", 0x1263CF, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libMSDKCore.so", 0x51CAC8, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libMSDKCore.so", 0x8D9F11, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libMSDKCore.so", 0x44A55E, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libMSDKCore.so", 0x9F1FB7, "h =00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0x1E7A93, "h 00 00 80 D2 C0 03 5F D6", 32);
 gg.toast("BYPASS AND ANTI CRASH ACTIVATED")
 end
 

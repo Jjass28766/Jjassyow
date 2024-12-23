@@ -226,6 +226,16 @@ HexPatches.BrixMODZ("libanogs.so", 0x242B58, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x2442C8, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x2B3BCB, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x1749A8, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0xDB345F, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0x091238, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0x95EB9D, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0x50023B, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0x21517B, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0xDDA40E, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0xA497C9, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0x4F733F, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0x67D6AD, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libTDataMaster.so", 0xA8628B, "h 00 00 80 D2 C0 03 5F D6", 32);
 gg.toast("BYPASS AND ANTI CRASH ACTIVATED")
 end
 

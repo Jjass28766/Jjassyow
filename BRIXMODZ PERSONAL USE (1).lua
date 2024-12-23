@@ -236,6 +236,16 @@ HexPatches.BrixMODZ("libTDataMaster.so", 0xA497C9, "h 00 00 80 D2 C0 03 5F D6", 
 HexPatches.BrixMODZ("libTDataMaster.so", 0x4F733F, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libTDataMaster.so", 0x67D6AD, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libTDataMaster.so", 0xA8628B, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0x3A4D32, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0xD56F8F, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0xB6625E, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0xC9C440, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0xA9BCFF, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0x11EFC9, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0xD55492, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0x92FA9B, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0x44A7FD, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libMSDKCore.so", 0x66A5AA, "h 00 00 80 D2 C0 03 5F D6", 32);
 gg.toast("BYPASS AND ANTI CRASH ACTIVATED")
 end
 

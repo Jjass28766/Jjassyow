@@ -565,8 +565,10 @@ e = gg.prompt({
 "• BIG BODY ENEMY [IN-GAME]",
 "• UNLI PUMP [IN-GAME]",
 "• FLY HACK [IN-GAME]",
+"• HIGH FOV FPP ONLY [IN-GAME]",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -630,7 +632,8 @@ if e[26] == true then nosmoke() end
 if e[27] == true then bigbody() end
 if e[28] == true then unlipump() end
 if e[29] == true then flyhack() end
-if e[30] == true then home() end
+if e[30] == true then fov() end
+if e[31] == true then home() end
 end
 end
 
@@ -1775,6 +1778,16 @@ var = gg.getResults(1000)
 gg.editAll("3.567891011",gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("FLY HACK ACTIVATED")
+end
+
+function fov()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("44.0;44.0;60.0;45.0;0.20000000298:33", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("44", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(950)
+gg.editAll("98", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("HIGH FOV ACTIVATED")
 end
 			
 function A4() 

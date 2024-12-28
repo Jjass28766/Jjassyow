@@ -3062,6 +3062,7 @@ if BrixMODZ == 1 then
 home() 
 end
 end
+end
 function xjekesjs()  
 	IMPro()    
 	local choice= gg.choice({"LOGIN", "KEY FOR VIP", "RESET KEY VIP"}, nil, "AXEMOD@Axcelpon") 	

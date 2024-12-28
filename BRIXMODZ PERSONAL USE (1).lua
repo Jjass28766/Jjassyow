@@ -527,12 +527,11 @@ gg.toast("EXTENDED RANGE ACTIVATED")
 end
 
 function snowspeed()
-local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x80DD184
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h4000001CC0035FD6"}})
-local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x80DD18C
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h0000A041F30300AA"}})
+so = gg.getRangesList('libunity.so')[1].start
+py = 0x80DD184
+setValues(so + py, 32, "h4000001CC0035FD6")
+setValues(so + py + 4, 32, "hC0035FD600007A44")
+setValues(so + py + 8, 16, 1000)
 gg.toast("SNOWBOARD SPEED ACTIVATED")
 end
 

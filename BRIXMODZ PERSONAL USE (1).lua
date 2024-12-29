@@ -2062,9 +2062,11 @@ end
 function mythic()          
 l=gg.multiChoice({
 "AK117 MYTHIC",
+"JAK 12 MYTHIC",
 }, nil, "MYTHIC GUNS")
 if b == nil then else
 if b[1] == true then ak117() end
+if b[2] == true then jak12() end
 end
 end
   
@@ -2081,6 +2083,20 @@ gg.setRanges(32)
     czk(ck1, ck2, 4)
    gg.toast("AK117 MYTHIC ACTIVATED")
 end
+
+	function jak12
+gg.setRanges(32)
+    ck1 = {{10520001, 0}, {4113, -0x10}}
+    ck2 = {{101094, 0x4}, {10520036, 0x8}}
+    czk(ck1, ck2, 4) 
+    ck1 = {{10520201, 0}, {4113, -0x10}}
+    ck2 = {{101094, 0x4}, {10520036, 0x8}}
+    czk(ck1, ck2, 4)
+    ck1 = {{10520001, 0}, {851968, -0x14}}
+    ck2 = {{400021, -0xC}, {300269, -0x8}, {16967, -0x14}}
+    czk(ck1, ck2, 4)
+gg.toast("JAK 12 MYTHIC ACTIVATED")
+	end
 
     
      

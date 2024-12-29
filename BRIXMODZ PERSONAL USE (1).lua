@@ -2249,49 +2249,36 @@ if k == 7 then pistol() end
 end
 end
 
-function melee()
-local xCy26, xVgF62 = tonumber, string.char
-local FVca6, Sn62V = table.unpack, table.concat
-local function GfGv9KpLzQ(a) return xVgF62(FVca6(a)) end
-local function xN7dWq1KrM(b) return xCy26(xVgF62(FVca6(b))) end
-function czk(Search, Write, Type) gg.clearResults() gg.setVisible(false) gg.searchNumber(Search[1][1], Type) local count = gg.getResultCount() local result = gg.getResults(count) gg.clearResults() local data = {} local base = Search[1][2] if (count > 0) then for i, v in ipairs(result) do v.isUseful = true end for k=2, #Search do local tmp = {} local offset = Search[k][2] - base local num = Search[k][1] for i, v in ipairs(result) do tmp[#tmp+1] = {} tmp[#tmp].address = v.address + offset tmp[#tmp].flags = v.flags end tmp = gg.getValues(tmp) for i, v in ipairs(tmp) do if ( tostring(v.value) ~= tostring(num) ) then result[i].isUseful = false end end end for i, v in ipairs(result) do if (v.isUseful) then data[#data+1] = v.address end end if (#data > 0) then gg.toast('Results '..#data..' Edited') local t = {} local base = Search[1][2] for i=1, #data do for k, w in ipairs(Write) do offset = w[2] - base t[#t+1] = {} t[#t].address = data[i] + offset t[#t].flags = Type t[#t].value = w[1] if (w[3] == true) then local item = {} item[#item+1] = t[#t] item[#item].freeze = true gg.addListItems(item) end end end gg.setValues(t) else return false end else return false end end
-    
-function skinFunction(fts)
-if (fts == GfGv9KpLzQ({75,78,73,70,69,66,79,32,76,111,110,103,113,117,97,110})) then     gg.setRanges(32)     ck1 = {{xN7dWq1KrM({49,48,55,48,50,57,57,57}), 0}, {xN7dWq1KrM({54,49,52,53}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,56,57,55}), 0x4}, {xN7dWq1KrM({49,48,55,48,50,54,55,48}), 0x8}}     czk(ck1, ck2, 4)      ck1 = {{xN7dWq1KrM({49,48,55,48,50,50,48,49}), 0}, {xN7dWq1KrM({54,49,52,53}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,56,57,55}), 0x4}, {xN7dWq1KrM({49,48,55,48,50,54,55,48}), 0x8}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,48,50,57,57,57}), 0}, {1880000001, 0x14}, {xN7dWq1KrM({53,48}), 0x4C}, {xN7dWq1KrM({51,48}), 0x54}}     ck2 = {{xN7dWq1KrM({52}), 0x8}, {xN7dWq1KrM({48}), 0x1C}, {xN7dWq1KrM({48}), 0x20}, {xN7dWq1KrM({50,48,48,50,52,52}), 0x24}, {xN7dWq1KrM({51,48,48,50,51,52}), 0x28}, {xN7dWq1KrM({48}), 0x2C}, {xN7dWq1KrM({48}), 0x30}, {xN7dWq1KrM({48}), 0x34}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,48,50,57,57,57}), 0}, {xN7dWq1KrM({49,48,55,48,50,57,57,56}), 0xA0}}     ck2 = {{xN7dWq1KrM({57,49,52,53,52}), -0xC}}     czk(ck1, ck2, 4)     ck1 = {{10702999, 0}, {0, 76}, {0, 84}, {0, 96}, {1, 100}, {0, 104}}     ck2 = {{xN7dWq1KrM({49,48,55,48,50,54,55,48}), 0x50}}     czk(ck1, ck2, 4) end
-if (fts == GfGv9KpLzQ({75,97,108,105,83,116,105,99,107,115,32,99,111,98,114,97})) then     gg.setRanges(32)     ck1 = {{xN7dWq1KrM({49,48,55,49,53,48,48,49}), 0}, {xN7dWq1KrM({54,49,54,51}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,50,54,54}), 0x4}, {xN7dWq1KrM({49,48,55,49,53,48,48,50}), 0x8}}     czk(ck1, ck2, 4)      ck1 = {{xN7dWq1KrM({49,48,55,49,53,50,48,49}), 0}, {xN7dWq1KrM({54,49,54,51}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,50,54,54}), 0x4}, {xN7dWq1KrM({49,48,55,49,53,48,48,50}), 0x8}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,49,53,48,48,49}), 0}, {1880000001, 0x14}, {xN7dWq1KrM({49,56,48}), 0x4C}, {xN7dWq1KrM({49,54,48}), 0x54}}     ck2 = {{xN7dWq1KrM({52}), 0x8}, {xN7dWq1KrM({48}), 0x1C}, {xN7dWq1KrM({48}), 0x20}, {xN7dWq1KrM({50,48,48,49,51,49}), 0x24}, {xN7dWq1KrM({51,48,48,49,50,52}), 0x28}, {xN7dWq1KrM({48}), 0x2C}, {xN7dWq1KrM({48}), 0x30}, {xN7dWq1KrM({48}), 0x34}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,49,53,48,48,49}), 0}, {xN7dWq1KrM({49,48,55,49,52,48,48,49}), 0xA0}}     ck2 = {{xN7dWq1KrM({54,55,56,53,55}), -0xC}}     czk(ck1, ck2, 4)     ck1 = {{10702999, 0}, {0, 76}, {0, 84}, {0, 96}, {1, 100}, {0, 104}}     ck2 = {{xN7dWq1KrM({49,48,55,49,53,48,48,50}), 0x50}}     czk(ck1, ck2, 4) end
-if (fts == GfGv9KpLzQ({66,117,116,116,101,114,102,108,121,75,110,105,102,101,32,76,101,103,101,110,100,97,114,121})) then     gg.setRanges(32)     ck1 = {{xN7dWq1KrM({49,48,55,49,54,48,48,49}), 0}, {xN7dWq1KrM({54,49,54,53}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,52,49,55}), 0x4}, {xN7dWq1KrM({49,48,55,49,54,48,48,50}), 0x8}}     czk(ck1, ck2, 4)      ck1 = {{xN7dWq1KrM({49,48,55,49,54,50,48,49}), 0}, {xN7dWq1KrM({54,49,54,53}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,52,49,55}), 0x4}, {xN7dWq1KrM({49,48,55,49,54,48,48,50}), 0x8}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,49,54,48,48,49}), 0}, {1880000001, 0x14}, {xN7dWq1KrM({49,56,48}), 0x4C}, {xN7dWq1KrM({49,54,48}), 0x54}}     ck2 = {{xN7dWq1KrM({52}), 0x8}, {xN7dWq1KrM({48}), 0x1C}, {xN7dWq1KrM({48}), 0x20}, {xN7dWq1KrM({50,48,48,49,52,52}), 0x24}, {xN7dWq1KrM({51,48,48,49,51,55}), 0x28}, {xN7dWq1KrM({48}), 0x2C}, {xN7dWq1KrM({48}), 0x30}, {xN7dWq1KrM({48}), 0x34}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,49,54,48,48,49}), 0}, {xN7dWq1KrM({49,48,52,49,52,48,55,52}), 0xA0}}     ck2 = {{xN7dWq1KrM({55,52,52,52,54}), -0xC}}     czk(ck1, ck2, 4)     ck1 = {{10702999, 0}, {0, 76}, {0, 84}, {0, 96}, {1, 100}, {0, 104}}     ck2 = {{xN7dWq1KrM({49,48,55,49,54,48,48,50}), 0x50}}     czk(ck1, ck2, 4) end
-if (fts == GfGv9KpLzQ({83,65,73,32,76,105,97,110,103,90,104,97,105})) then     gg.setRanges(32)     ck1 = {{xN7dWq1KrM({49,48,55,49,56,48,48,49}), 0}, {xN7dWq1KrM({54,49,54,55}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,55,53,54}), 0x4}, {xN7dWq1KrM({49,48,55,49,56,48,48,50}), 0x8}}     czk(ck1, ck2, 4)      ck1 = {{xN7dWq1KrM({49,48,55,49,56,50,48,49}), 0}, {xN7dWq1KrM({54,49,54,55}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,55,53,54}), 0x4}, {xN7dWq1KrM({49,48,55,49,56,48,48,50}), 0x8}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,49,56,48,48,49}), 0}, {1880000001, 0x14}, {xN7dWq1KrM({49,56,48}), 0x4C}, {xN7dWq1KrM({49,54,48}), 0x54}}     ck2 = {{xN7dWq1KrM({52}), 0x8}, {xN7dWq1KrM({48}), 0x1C}, {xN7dWq1KrM({48}), 0x20}, {xN7dWq1KrM({50,48,48,50,49,56}), 0x24}, {xN7dWq1KrM({51,48,48,50,48,56}), 0x28}, {xN7dWq1KrM({48}), 0x2C}, {xN7dWq1KrM({48}), 0x30}, {xN7dWq1KrM({48}), 0x34}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,49,56,48,48,49}), 0}, {xN7dWq1KrM({49,48,53,50,49,50,49,48}), 0xA0}}     ck2 = {{xN7dWq1KrM({56,54,51,52,55}), -0xC}}     czk(ck1, ck2, 4)     ck1 = {{10702999, 0}, {0, 76}, {0, 84}, {0, 96}, {1, 100}, {0, 104}}     ck2 = {{xN7dWq1KrM({49,48,55,49,56,48,48,50}), 0x50}}     czk(ck1, ck2, 4) end
-if (fts == GfGv9KpLzQ({83,80,69,65,82,32,108,111,121,97,108,116,121})) then     gg.setRanges(32)     ck1 = {{xN7dWq1KrM({49,48,55,50,48,48,48,49}), 0}, {xN7dWq1KrM({54,49,54,57}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,57,51,53}), 0x4}, {xN7dWq1KrM({49,48,55,50,48,48,48,50}), 0x8}}     czk(ck1, ck2, 4)      ck1 = {{xN7dWq1KrM({49,48,55,50,48,50,48,49}), 0}, {xN7dWq1KrM({54,49,54,57}), -0x10}}     ck2 = {{xN7dWq1KrM({49,48,48,57,51,53}), 0x4}, {xN7dWq1KrM({49,48,55,50,48,48,48,50}), 0x8}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,50,48,48,48,49}), 0}, {1880000001, 0x14}, {xN7dWq1KrM({49,56,48}), 0x4C}, {xN7dWq1KrM({49,54,48}), 0x54}}     ck2 = {{xN7dWq1KrM({52}), 0x8}, {xN7dWq1KrM({48}), 0x1C}, {xN7dWq1KrM({48}), 0x20}, {xN7dWq1KrM({50,48,48,50,53,48}), 0x24}, {xN7dWq1KrM({51,48,48,50,52,48}), 0x28}, {xN7dWq1KrM({48}), 0x2C}, {xN7dWq1KrM({48}), 0x30}, {xN7dWq1KrM({48}), 0x34}}     czk(ck1, ck2, 4)     ck1 = {{xN7dWq1KrM({49,48,55,50,48,48,48,49}), 0}, {xN7dWq1KrM({51,54,49,48,48,54,48,57,50}), 0xA0}}     ck2 = {{xN7dWq1KrM({57,50,55,53,56}), -0xC}}     czk(ck1, ck2, 4)     ck1 = {{10702999, 0}, {0, 76}, {0, 84}, {0, 96}, {1, 100}, {0, 104}}     ck2 = {{xN7dWq1KrM({49,48,55,50,48,48,48,50}), 0x50}}     czk(ck1, ck2, 4) end
-end
-
-local weaponSkins = {
-    GfGv9KpLzQ({75,78,73,70,69,66,79,32,76,111,110,103,113,117,97,110}),
-        GfGv9KpLzQ({75,97,108,105,83,116,105,99,107,115,32,99,111,98,114,97}),
-        GfGv9KpLzQ({66,117,116,116,101,114,102,108,121,75,110,105,102,101,32,76,101,103,101,110,100,97,114,121}),
-        GfGv9KpLzQ({83,65,73,32,76,105,97,110,103,90,104,97,105}),
-        GfGv9KpLzQ({83,80,69,65,82,32,108,111,121,97,108,116,121}),
-        }
-        
-    local filteredSkins = {}
-    for _, skin in ipairs(weaponSkins) do
-        table.insert(filteredSkins, skin)
-    end              
-
-    if #filteredSkins > 0 then
-    
-            local selectedSkins = gg.multiChoice(filteredSkins, nil, 'Select Skins')
-            if filteredSkins and selectedSkins then
-                for i, isSelected in ipairs(filteredSkins) do
-                    if selectedSkins[i] then
-                    skinFunction(filteredSkins[i])
-                    end
-                end
-            else
-                print('No skins selected.')
-     end
+function melee()     
+x = gg.prompt({
+"• TANG KNIFE",
+"◻️ ʙᴀᴄᴋ", 
+}, nil, {
+    "checkbox",
+    "checkbox",
+    "checkbox",
+    "checkbox",
+    "checkbox",
+    })
+if l == nil then else
+if l[1] == true then tang() end
+if l[2] == true then home() end
 end
 end
-    
+	function tang()
+        gg.setRanges(32)
+    ck1 = {{10101001, 0}, {11, -0x10}}
+    ck2 = {{100477, 0x4}, {10717001, 0x8}}
+    czk(ck1, ck2, 4) 
+    ck1 = {{10101201, 0}, {11, -0x10}}
+    ck2 = {{100477, 0x4}, {10717001, 0x8}}
+    czk(ck1, ck2, 4)
+    ck1 = {{10101001, 0}, {851968, -0x14}}
+    ck2 = {{0, -0xC}, {300152, -0x8}, {0, -0x14}}
+    czk(ck1, ck2, 4)
+gg.toast("TANG KNIFE ACTIVATED")
+	end
+		
 function shotgun()
 n=gg.multiChoice({
 "KRM GLORIOUS BLAZE",

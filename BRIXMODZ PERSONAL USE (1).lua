@@ -2084,7 +2084,7 @@ gg.setRanges(32)
    gg.toast("AK117 MYTHIC ACTIVATED")
 end
 
-	function jak12
+	function jak12()
 gg.setRanges(32)
     ck1 = {{10520001, 0}, {4113, -0x10}}
     ck2 = {{101094, 0x4}, {10520036, 0x8}}

@@ -2064,8 +2064,10 @@ l = gg.prompt({
 "• AK117 MYTHIC",
 "• JAK 12 MYTHIC",
 "• KILO 141 MYTHIC",
+"• UZI MYTHIC",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -2075,7 +2077,8 @@ if l == nil then else
 if l[1] == true then ak117() end
 if l[2] == true then jak12() end
 if l[3] == true then kilo() end
-if l[4] == true then home() end
+if l[4] == true then uzi() end
+if l[5] == true then home() end
 end
 end
   
@@ -2118,6 +2121,20 @@ gg.setRanges(32)
     ck2 = {{400006, -0xC}, {300105, -0x8}, {0, -0x14}}
     czk(ck1, ck2, 4)
 gg.toast("KILO 141 MYTHIC ACTIVATED")
+	end
+
+function uzi()
+gg.setRanges(32)
+    ck1 = {{10431001, 0}, {2084, -0x10}}
+    ck2 = {{109554, 0x4}, {10431002, 0x8}}
+    czk(ck1, ck2, 4) 
+    ck1 = {{10431201, 0}, {2084, -0x10}}
+    ck2 = {{109554, 0x4}, {10431002, 0x8}}
+    czk(ck1, ck2, 4)
+    ck1 = {{10431001, 0}, {851968, -0x14}}
+    ck2 = {{400022, -0xC}, {300282, -0x8}, {18514, -0x14}}
+    czk(ck1, ck2, 4)
+gg.toast("UZI MYTHIC ACTIVATED")
 	end
 
     

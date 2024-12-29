@@ -2251,7 +2251,7 @@ end
 
 function melee()     
 x = gg.prompt({
-"• TANG KNIFE",
+"• DARK KNIFE",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
     "checkbox",
@@ -2268,15 +2268,15 @@ end
 	function tang()
         gg.setRanges(32)
     ck1 = {{10101001, 0}, {11, -0x10}}
-    ck2 = {{100477, 0x4}, {10717001, 0x8}}
+    ck2 = {{100897, 0x4}, {10702670, 0x8}}
     czk(ck1, ck2, 4) 
     ck1 = {{10101201, 0}, {11, -0x10}}
-    ck2 = {{100477, 0x4}, {10717001, 0x8}}
+    ck2 = {{100897, 0x4}, {10702670, 0x8}}
     czk(ck1, ck2, 4)
     ck1 = {{10101001, 0}, {851968, -0x14}}
-    ck2 = {{0, -0xC}, {300152, -0x8}, {0, -0x14}}
+    ck2 = {{0, -0xC}, {300234, -0x8}, {0, -0x14}}
     czk(ck1, ck2, 4)
-gg.toast("TANG KNIFE ACTIVATED")
+gg.toast("DARK KNIFE ACTIVATED")
 	end
 		
 function shotgun()

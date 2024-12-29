@@ -2260,9 +2260,9 @@ x = gg.prompt({
     "checkbox",
     "checkbox",
     })
-if l == nil then else
-if l[1] == true then tang() end
-if l[2] == true then home() end
+if x == nil then else
+if x[1] == true then tang() end
+if x[2] == true then home() end
 end
 end
 	function tang()

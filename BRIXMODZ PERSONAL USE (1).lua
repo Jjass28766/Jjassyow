@@ -2060,13 +2060,19 @@ end
 end
 
 function mythic()          
-l=gg.multiChoice({
-"AK117 MYTHIC",
-"JAK 12 MYTHIC",
-}, nil, "MYTHIC GUNS")
-if b == nil then else
-if b[1] == true then ak117() end
-if b[2] == true then jak12() end
+l = gg.prompt({
+"• AK117 MYTHIC,
+"• JAK 12 MYTHIC",
+"◻️ ʙᴀᴄᴋ", 
+}, nil, {
+    "checkbox",
+    "checkbox",
+    "checkbox",
+    })
+if l == nil then else
+if l[1] == true then ak117() end
+if l[2] == true then jak12() end
+if l[3] == true then home() end
 end
 end
   

@@ -2061,7 +2061,7 @@ end
 
 function mythic()          
 l = gg.prompt({
-"• AK117 MYTHIC,
+"• AK117 MYTHIC",
 "• JAK 12 MYTHIC",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {

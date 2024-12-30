@@ -306,7 +306,7 @@ end
 local expiremessage = "Expired key"
 local Date = 30   
 local Month = 12    
-local Year = 2024
+local Year = 2999
 local expiredate = Year .. check(Month) .. check(Date)
 local response = gg.makeRequest("http://www.guimp.com")
 local date = response.headers["Date"][1]
@@ -2932,7 +2932,7 @@ end
 end	
 function xjekesjs()  
 	IMPro()    
-	local choice= gg.choice({"LOGIN", "COPY YOUR PHONE CODE", "RESET YOUR PHONE CODE"}, nil, "AXEMOD@Axcelpon") 	
+	local choice= gg.choice({"LOGIN", "COPY YOUR PHONE CODE", "RESET YOUR PHONE CODE"}, nil, "BRIXMODZ LOADER V4") 	
 	if choice == 1 then   
 	    local useredjdjdj= gg.prompt({"Enter your key"}, nil, {"text"})   
 	    if useredjdjdj then   
@@ -2946,7 +2946,7 @@ function xjekesjs()
 	elseif choice == 2 then   
 	    if _G.hssjxixi then   
 	        gg.copyText(_G.hssjxixi)   
-	        gg.alert("Send to the Owner")   
+	        gg.alert("SEND THE CODE TO @brixmods")   
 	    else   
 	        gg.alert("No additional key available. Please generate a key first.")   
 	    end   

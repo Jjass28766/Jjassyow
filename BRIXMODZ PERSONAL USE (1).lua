@@ -2932,7 +2932,7 @@ end
 end	
 function xjekesjs()  
 	IMPro()    
-	local choice= gg.choice({"LOGIN", "KEY FOR VIP", "RESET KEY VIP"}, nil, "AXEMOD@Axcelpon") 	
+	local choice= gg.choice({"LOGIN", "COPY YOUR PHONE CODE", "RESET YOUR PHONE CODE"}, nil, "AXEMOD@Axcelpon") 	
 	if choice == 1 then   
 	    local useredjdjdj= gg.prompt({"Enter your key"}, nil, {"text"})   
 	    if useredjdjdj then   

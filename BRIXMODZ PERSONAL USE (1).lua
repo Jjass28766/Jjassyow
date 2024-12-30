@@ -1,72 +1,123 @@
-LoginURL= "https://brixonlinepanel.x10.bz/Login.php" ---- Login.php Link
-
-function split(s, delimiter)  result = {}; for match in (s..delimiter):gmatch("(.-)"..delimiter) do table.insert(result, match); end return result; end function WriteText(Direc,Text)f = io.open(Direc, "w") f:write(Text) f:close() end  function MakeRequest(URL,parm)  Content = gg.makeRequest(URL,nil,parm).content load('Dfile  = '.."string.char(table.unpack(".. "{"..Content:gsub(string.char(tonumber("40",16))..string.char(tonumber("45",16))..string.char(tonumber("6e",16))..string.char(tonumber("63",16))..string.char(tonumber("72",16))..string.char(tonumber("79",16))..string.char(tonumber("70",16))..string.char(tonumber("74",16))..string.char(tonumber("65",16))..string.char(tonumber("64",16))..string.char(tonumber("20",16))..string.char(tonumber("72",16))..string.char(tonumber("65",16))..string.char(tonumber("73",16))..string.char(tonumber("70",16))..string.char(tonumber("6f",16))..string.char(tonumber("6e",16))..string.char(tonumber("73",16))..string.char(tonumber("65",16))..string.char(tonumber("20",16))..string.char(tonumber("42",16))..string.char(tonumber("79",16))..string.char(tonumber("20",16))..string.char(tonumber("44",16))..string.char(tonumber("61",16))..string.char(tonumber("72",16))..string.char(tonumber("6b",16))..string.char(tonumber("69",16))..string.char(tonumber("6e",16))..string.char(tonumber("67",16))..string.char(tonumber("43",16))..string.char(tonumber("68",16))..string.char(tonumber("65",16))..string.char(tonumber("61",16))..string.char(tonumber("74",16))..string.char(tonumber("65",16))..string.char(tonumber("72",16))..string.char(tonumber("2c",16)),""):gsub(",","~ 255,").."~ 255}".."))")() return Dfile  end 
-local open = io.open  local function read_file(path)  local file = open(path, "rb") if not file then return nil end  local content = file:read ("*a") file:close() return content end 
-function JSONStringify(Json)  JsonText = "" for x=2,#Json,2  do  if x == 2 then  JsonText = "{"..'"'..Json[x-1]..'":'..'"'..Json[x]..'"'  else JsonText =JsonText..',"'..Json[x-1]..'":'..'"'..Json[x]..'"'  end if x == #Json then JsonText = JsonText.."}" end end return JsonText end
-
-
-function Main()
-Choice = gg.choice({"𝑪𝑳𝑰𝑪𝑲 𝑻𝑶 𝑳𝑶𝑮𝑰𝑵!"})
-if read_file(gg.EXT_STORAGE.."/Detail.conf") ~= nil and string.len(read_file(gg.EXT_STORAGE.."/Detail.conf"))  > 2 then
-if not Choice then
-return os.exit()
-end
-if Choice == 1 then
-__ = read_file(gg.EXT_STORAGE.."/Detail.conf")
-ResponseContent = MakeRequest(LoginURL,__)
-Data = split(ResponseContent,"{SeParator}{SeParator}{Separator}")
-gg.alert(Data[1])
-load(Data[2])()
-return;
-else
-WriteText(gg.EXT_STORAGE.."/Detail.conf","")
-end
-end
-Prompt = gg.prompt({"Username: ","Password: ","Exit"},nil,{"text","text","checkbox"})
- if not Prompt then
- return os.exit()
- end
- if Prompt[3] then
- return os.exit()
- end
-
-TempLogin = JSONStringify({"Username",Prompt[1],"Password",Prompt[2]})
-
-ResponseContent = MakeRequest(LoginURL,TempLogin)
-Data = split(ResponseContent,"{SeParator}{SeParator}{Separator}")
-if #Data >1 then
-if read_file(gg.EXT_STORAGE.."/Detail.conf") == nil or string.len(read_file(gg.EXT_STORAGE.."/Detail.conf")) < 2  then
-WriteText(gg.EXT_STORAGE.."/Detail.conf",TempLogin)
-end
-gg.alert(Data[1])
-if not Data[2] then
-Main()
-end
-load(Data[2])()
-else
-load(Data[1])()
-Main()
-end
-TempLogin = JSONStringify({"Username",Prompt[1],"Password",Prompt[2]})
-
-ResponseContent = MakeRequest(LoginURL,TempLogin)
-Data = split(ResponseContent,"{SeParator}{SeParator}{Separator}")
-if #Data >1 then
-if read_file(gg.EXT_STORAGE.."/Detail.conf") == nil or string.len(read_file(gg.EXT_STORAGE.."/Detail.conf")) < 2  then
-WriteText(gg.EXT_STORAGE.."/Detail.conf",TempLogin)
-end
-gg.alert(Data[1])
-if not Data[2] then
-Main()
-end
-load(Data[2])()
-else
-load(Data[1])()
-Main()
-end
-end
-
-Main()
+function lq() 
+gg.alert("Welcome") 
+function unXXX(str64) 
+    local b64chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/' 
+    local temp={} 
+    for i=1,64 do 
+        temp[string.sub(b64chars,i,i)] = i 
+    end 
+    temp['=']=0 
+    local str="" 
+    for i=1,#str64,4 do 
+        if i>#str64 then 
+            break 
+        end 
+        local data = 0 
+        local str_count=0 
+        for j=0,3 do 
+            local str1=string.sub(str64,i+j,i+j) 
+            if not temp[str1] then 
+                return 
+            end 
+            if temp[str1] < 1 then 
+                data = data * 64 
+            else 
+                data = data * 64 + temp[str1]-1 
+                str_count = str_count + 1 
+            end 
+        end 
+        for j=16,0,-8 do 
+            if str_count > 0 then 
+                str=str..string.char(math.floor(data/math.pow(2,j))) 
+                data=math.fmod(data,math.pow(2,j)) 
+                str_count = str_count - 1 
+            end 
+        end 
+    end 
+  
+    local last = tonumber(string.byte(str, string.len(str), string.len(str))) 
+    if last == 0 then 
+        str = string.sub(str, 1, string.len(str) - 1) 
+    end 
+    ddd=str 
+end 
+ lqSJ = math.random(2685355,99999999) 
+ lqc=io.open('/storage/emulated/0/.49623513_1','r') 
+ if lqc == nil then 
+   lqc=io.open('/storage/emulated/0/Android/.49623513_int','w') 
+   lqc:write(lqSJ*6-967) 
+   lqc=io.open('/storage/emulated/0/.49623513_1','w') 
+   lqc:write(lqSJ*6-967) 
+   lqd = io.open('/storage/emulated/0/Android/.49623513_int','r') 
+   lqdm = lqd:read('*a') 
+   lqd:close() 
+ else 
+  abc=io.open('/storage/emulated/0/Android/.49623513_int','w') 
+  if abc == nil then 
+   lqdd = io.open('/storage/emulated/0/.49623513_1','r') 
+   lqdmm = lqdd:read('*a') 
+   lqdd:close() 
+   lqd = io.open('/storage/emulated/0/Android/.49623513_int','w') 
+   lqd:write(lqdmm) 
+   lqd:close() 
+   end 
+   lqd = io.open('/storage/emulated/0/Android/.49623513_int','r') 
+   lqdm = lqd:read('*a') 
+   lqd:close() 
+   lqdd = io.open('/storage/emulated/0/.49623513_1','r') 
+   lqdmm = lqdd:read('*a') 
+   lqdd:close() 
+   yanzheng = lqdm == lqdmm 
+   if yanzheng == true then print("") else 
+   lqd = io.open('/storage/emulated/0/Android/.49623513_int','w') 
+   lqd:write(lqdmm) 
+   lqd:close() 
+   end 
+   lqd = io.open('/storage/emulated/0/Android/.49623513_int','r') 
+   lqdm = lqd:read('*a') 
+   lqd:close() 
+ end 
+ lqdm = (lqdm + 967)/6 
+ lqs = io.open('/storage/emulated/0/Android/.49623513_1_dll','r') 
+ if lqs == nil then 
+   lqsa=gg.alert('Enter Your Key:','Yes','Exit') 
+   if lqsa ~= 1 then print('Wrong') os.exit() 
+   else 
+     lqv = gg.prompt({'Enter Key:','Your Phone Code: ' .. lqdm},{[1]='',[2]= lqdm },{[1] = 'text',[2] = 'text'}) 
+     if lqv == nil then print('Error') os.exit() end 
+     if lqv[1] == '' then print('Dont Empty') os.exit() end 
+     unXXX(lqv[1]) 
+     local lqB = ddd 
+     local lqC = lqdm 
+     if lqv[1]==ddd then gg.toast('Please Enter the Correct Key') os.exit() end 
+     pd = tonumber(lqB) 
+     if pd ~= lqB then gg.toast('Please Enter the Correct Key') os.exit() end 
+     lqD = pd 
+     lqA = lqD 
+     unXXX("MTQ1NDE2") 
+          zcj = tonumber(ddd) 
+     if zcj ~= ddd then gg.toast('Wrong Key') os.exit() end 
+     aaa = (3*lqdm+zcj)..'' 
+     bbb = (7*lqdm+zcj)..'' 
+     ccc = (15*lqdm+zcj)..'' 
+     ddd = (30*lqdm+zcj)..'' 
+     if lqA == aaa then 
+     aaaa = 3 
+     gg.alert(' 3days Key ','Yes') 
+     else 
+       if lqA == bbb then 
+       aaaa = 7 
+       gg.alert(' 7days Key ','Yes') 
+       else 
+         if lqA == ccc then 
+         aaaa = 15 
+         gg.alert(' 15days Key ','Yes') 
+         else 
+         if lqA == ddd then 
+         aaaa = 30 
+         gg.alert(' 30days Key ','Yes') 
+         else 
+           gg.alert(' Wrong Key ') os.exit()
 
 gg.alert("ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʙʀɪxᴍᴏᴅᴢ")
 

@@ -518,8 +518,10 @@ e = gg.prompt({
 "• LONG EXECUTION",
 "• EXTENDED RANGE",
 "• SNOWBOARD SPEED",
+"• WALK UNDERWATER",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -573,7 +575,8 @@ if e[21] == true then shake() end
 if e[22] == true then execution() end
 if e[23] == true then weaprange() end
 if e[24] == true then snowspeed() end
-if e[25] == true then home() end
+if e[25] == true then water() end
+if e[26] == true then home() end
 end
 end
 
@@ -787,6 +790,18 @@ setValues(so + py + 4, 32, "hC0035FD600007A44")
 setValues(so + py + 8, 16, 1000000)
 gg.toast("SNOWBOARD SPEED ACTIVATED")
 end
+function water()
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x808AF2C 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x80A9214
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x81E3354 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+gg.toast("WALK UNDERWATER ACTIVATED")
+	end
 
 function A3() 
 e = gg.prompt({

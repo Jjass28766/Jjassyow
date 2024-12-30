@@ -1,328 +1,72 @@
-local FakePath = "/sdcard/Conculonton"
-function gg.getFile()
-    return FakePath
+LoginURL= "https://brixonlinepanel.x10.bz/Login.php" ---- Login.php Link
+
+function split(s, delimiter)  result = {}; for match in (s..delimiter):gmatch("(.-)"..delimiter) do table.insert(result, match); end return result; end function WriteText(Direc,Text)f = io.open(Direc, "w") f:write(Text) f:close() end  function MakeRequest(URL,parm)  Content = gg.makeRequest(URL,nil,parm).content load('Dfile  = '.."string.char(table.unpack(".. "{"..Content:gsub(string.char(tonumber("40",16))..string.char(tonumber("45",16))..string.char(tonumber("6e",16))..string.char(tonumber("63",16))..string.char(tonumber("72",16))..string.char(tonumber("79",16))..string.char(tonumber("70",16))..string.char(tonumber("74",16))..string.char(tonumber("65",16))..string.char(tonumber("64",16))..string.char(tonumber("20",16))..string.char(tonumber("72",16))..string.char(tonumber("65",16))..string.char(tonumber("73",16))..string.char(tonumber("70",16))..string.char(tonumber("6f",16))..string.char(tonumber("6e",16))..string.char(tonumber("73",16))..string.char(tonumber("65",16))..string.char(tonumber("20",16))..string.char(tonumber("42",16))..string.char(tonumber("79",16))..string.char(tonumber("20",16))..string.char(tonumber("44",16))..string.char(tonumber("61",16))..string.char(tonumber("72",16))..string.char(tonumber("6b",16))..string.char(tonumber("69",16))..string.char(tonumber("6e",16))..string.char(tonumber("67",16))..string.char(tonumber("43",16))..string.char(tonumber("68",16))..string.char(tonumber("65",16))..string.char(tonumber("61",16))..string.char(tonumber("74",16))..string.char(tonumber("65",16))..string.char(tonumber("72",16))..string.char(tonumber("2c",16)),""):gsub(",","~ 255,").."~ 255}".."))")() return Dfile  end 
+local open = io.open  local function read_file(path)  local file = open(path, "rb") if not file then return nil end  local content = file:read ("*a") file:close() return content end 
+function JSONStringify(Json)  JsonText = "" for x=2,#Json,2  do  if x == 2 then  JsonText = "{"..'"'..Json[x-1]..'":'..'"'..Json[x]..'"'  else JsonText =JsonText..',"'..Json[x-1]..'":'..'"'..Json[x]..'"'  end if x == #Json then JsonText = JsonText.."}" end end return JsonText end
+
+
+function Main()
+Choice = gg.choice({"𝑪𝑳𝑰𝑪𝑲 𝑻𝑶 𝑳𝑶𝑮𝑰𝑵!"})
+if read_file(gg.EXT_STORAGE.."/Detail.conf") ~= nil and string.len(read_file(gg.EXT_STORAGE.."/Detail.conf"))  > 2 then
+if not Choice then
+return os.exit()
 end
-local pret = "function: @" .. gg.getFile() .. ":2-4"
-local cc = string.match(pret, "@(.+):")
-if gg.getFile() ~= cc or #FakePath ~= #cc then 
-    return gg.alert("")
-elseif #tostring(gg.getFile()) ~= #FakePath then
-    return gg.alert("")
-end
-local test = string.rep("0", 1000)
-if tostring(string.sub) == tostring(string.rep) or (test ~= ("0"):rep(1000)) then
-    return gg.alert("lol")
+if Choice == 1 then
+__ = read_file(gg.EXT_STORAGE.."/Detail.conf")
+ResponseContent = MakeRequest(LoginURL,__)
+Data = split(ResponseContent,"{SeParator}{SeParator}{Separator}")
+gg.alert(Data[1])
+load(Data[2])()
+return;
 else
-    local _time = os.clock()
-    local Spam = function()
-        _sptext = ("27"):rep(1000000)
-        for i = 1, 99 do
-            debug.getinfo(1, nil, _sptext)
-        end
-    end
-    Spam()
-    local elapsed_time = os.clock() - _time
-    if elapsed_time > 5 then 
-        gg.alert("fuckfuck")
-        while true do
-            Spam()
-        end
-    end
+WriteText(gg.EXT_STORAGE.."/Detail.conf","")
 end
-local C = string.rep(" ", 50)
-local Check = {}
-for i = 1, 1024 do
-    Check[i] = C
 end
-for _, B in pairs({gg.alert, gg.bytes, gg.copyText, gg.searchAddress, gg.searchNumber, gg.toast}) do
-    pcall(B, Check)
+Prompt = gg.prompt({"Username: ","Password: ","Exit"},nil,{"text","text","checkbox"})
+ if not Prompt then
+ return os.exit()
+ end
+ if Prompt[3] then
+ return os.exit()
+ end
+
+TempLogin = JSONStringify({"Username",Prompt[1],"Password",Prompt[2]})
+
+ResponseContent = MakeRequest(LoginURL,TempLogin)
+Data = split(ResponseContent,"{SeParator}{SeParator}{Separator}")
+if #Data >1 then
+if read_file(gg.EXT_STORAGE.."/Detail.conf") == nil or string.len(read_file(gg.EXT_STORAGE.."/Detail.conf")) < 2  then
+WriteText(gg.EXT_STORAGE.."/Detail.conf",TempLogin)
 end
-local function HookBlocker(...)
-    local Add = {io, os, utf8, math, string, debug, bit, bit32, gg}
-    local Hook = ""
-    local TimeCheck = os.clock()
-    local Big = string.rep("Axcel", 1)
-    for i = 1, 1000 do
-        debug.getinfo(1, nil, Big)
-    end
-    local check = string.format("%.2f", os.clock() - TimeCheck) * 100
-    if check > 10 then
-        os.exit()
-    end
-    for i = 1, #Add do
-        Hook = Hook .. tostring(Add[i])
-    end
-    local getBypassfind = tostring(string.find):match("@[^\n]*/")
-    if getBypassfind then
-        os.exit()
-    end
+gg.alert(Data[1])
+if not Data[2] then
+Main()
 end
-Checkh = {}
-local z = {"gg.%a+"}
-local ttz = {gg.editAll, gg.searchNumber}
-for _0x1 in tostring(gg):gmatch("%[%'%w+'%] = function") do
-    _0x1 = _0x1:match("%[%'%w+'%]"):match("%w+")
-    table.insert(Checkh, _0x1)
+load(Data[2])()
+else
+load(Data[1])()
+Main()
 end
-for i = 1, #ttz do
-    while not tostring(debug.getinfo(ttz[i])):match(z[1]) do
-    end
+TempLogin = JSONStringify({"Username",Prompt[1],"Password",Prompt[2]})
+
+ResponseContent = MakeRequest(LoginURL,TempLogin)
+Data = split(ResponseContent,"{SeParator}{SeParator}{Separator}")
+if #Data >1 then
+if read_file(gg.EXT_STORAGE.."/Detail.conf") == nil or string.len(read_file(gg.EXT_STORAGE.."/Detail.conf")) < 2  then
+WriteText(gg.EXT_STORAGE.."/Detail.conf",TempLogin)
 end
-for i = 1, #Checkh do
-    local Check2 = tostring("gg." .. Checkh[i]):match(z[1])
-    local Check3 = tostring(debug.getinfo(gg[Checkh[i]]))
-    if not Check3:find(Check2) or Check3:match(z[1]) ~= Check2 then
-    end
+gg.alert(Data[1])
+if not Data[2] then
+Main()
 end
-local AccelTale = {
-    ["a"] = "z", ["b"] = "y", ["c"] = "x", ["d"] = "w", ["e"] = "v",
-    ["f"] = "u", ["g"] = "t", ["h"] = "s", ["i"] = "r", ["j"] = "q",
-    ["k"] = "p", ["l"] = "o", ["m"] = "n", ["n"] = "m", ["o"] = "l",
-    ["p"] = "k", ["q"] = "j", ["r"] = "i", ["s"] = "h", ["t"] = "g",
-    ["u"] = "f", ["v"] = "e", ["w"] = "d", ["x"] = "c", ["y"] = "b",
-    ["z"] = "a", [" "] = "_", ["\n"] = "|",
-    ["_"] = " ", ["|"] = "\n"
-}
-local nanioooo = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567"
-function nani_abno(edjdjdj)
-    local AXEHAj = ""
-    local buffer = 0
-    local AXEHACKPRO = 0
-    for i = 1, #edjdjdj do
-        local byte = string.byte(edjdjdj, i)
-        buffer = (buffer * 256) + byte
-        AXEHACKPRO = AXEHACKPRO + 8
-        while AXEHACKPRO >= 5 do
-            local iyot = (buffer >> (AXEHACKPRO - 5)) & 31
-            AXEHAj = AXEHAj .. nanioooo:sub(iyot + 1, iyot + 1)
-            AXEHACKPRO = AXEHACKPRO - 5
-        end
-    end
-    if AXEHACKPRO > 0 then
-        local iyot = (buffer << (5 - AXEHACKPRO)) & 31
-        AXEHAj = AXEHAj .. nanioooo:sub(iyot + 1, iyot + 1)
-    end
-    return AXEHAj
+load(Data[2])()
+else
+load(Data[1])()
+Main()
+end
 end
 
-function nani_taekaba(edjdjdj)
-    local AXEHAj = ""
-    local buffer = 0
-    local AXEHACKPRO = 0
-    for i = 1, #edjdjdj do
-        local karat = edjdjdj:sub(i, i)
-        local iyot = nanioooo:find(karat)
-        if iyot then
-            iyot = iyot - 1
-            buffer = (buffer * 32) + iyot
-            AXEHACKPRO = AXEHACKPRO + 5
-            while AXEHACKPRO >= 8 do
-                local byte = (buffer >> (AXEHACKPRO - 8)) & 255
-                AXEHAj = AXEHAj .. string.char(byte)
-                AXEHACKPRO = AXEHACKPRO - 8
-            end
-        else
-            gg.alert("Invalid key, not matched.")
-            return ""
-        end
-    end
-    return AXEHAj
-end
-
-function Axecel(edjdjdj)
-    local abnod = ""
-    for i = 1, #edjdjdj do
-        local karat = edjdjdj:sub(i, i)
-        abnod = abnod .. (AccelTale[karat] or karat)
-    end
-    return abnod
-end
-function Pogiko(edjdjdj)
-    local burat = ""
-    for i = 1, #edjdjdj do
-        local karat = edjdjdj:sub(i, i)
-        burat = burat .. (AccelTale[karat] or karat)
-    end
-    return burat
-end
-function boboma()
-    local oooo = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    local yyyyy = 12
-    local key = ""
-    math.randomseed(os.time())
-    for i = 1, yyyyy do
-        local iyot = math.random(1, #oooo)
-        key = key .. oooo:sub(iyot, iyot)
-    end
-    return key
-end
-function readKeyFromFile(filePath)
-    local file = io.open(filePath, "r")
-    local key
-    if file then
-        key = file:read("*a")
-        file:close()
-    end
-    return key or ""
-end
-function saveKeyToFile(filePath, key)
-    local file = io.open(filePath, "w")
-    if file then
-        file:write(key)
-        file:close()
-    else
-        gg.alert("Failed to save key to file: ".. filePath)
-    end 
-end
-function xehejd(filePath)
-    os.remove(filePath)
-end
-function readtaeDate()
-    local filePathDate= "/sdcard/DCIM/CAMERA/IMG_.jpg"
-    local fileDate= io.open(filePathDate, "r")
-    
-	local tae 
-	if fileDate then 
-		tae= fileDate:read("*a") 
-		fileDate:close() 
-	end 
-	return tae 
-end 
-function iwsodx(date) 
-	local filePathDate= "/sdcard/DCIM/CAMERA/IMG_.jpg" 
-	local fileDate= io.open(filePathDate, "w") 
-	if fileDate then 
-		fileDate:write(date) 
-		fileDate:close() 
-	else 
-		gg.alert("Failed to save last run date.") 
-	end 
-end 
-local function jawkksk() 
-	local tae= readtaeDate() 
-	local xocdj= os.date("%Y/%m/%d") 
-	if tae and tae > xocdj then 
-		xehejd("/sdcard/download/accel.txt")
-		local titePath= "/sdcard/DCIM/CAMERA/IMG_9234991.jpg" 
-		local tite= io.open(titePath, "r") 		
-		if not tite then 
-			tite= io.open(titePath, "w") 
-			if tite then 
-				local taratado= "Access is locked due to backward time change." 
-				local abnodtaratado= Axecel(taratado) 
-				tite:write(abnodtaratado) 
-				tite:close() 
-			end 
-		end        
-		gg.alert("Time has been set backward. Your keys have been reset and access is locked.") 
-		os.exit() 
-	end 
-	iwsodx(xocdj) 
-end 
-function IMPro() 
-	local titePath= "/sdcard/DCIM/CAMERA/IMG_9234991.jpg" 
-	local tite= io.open(titePath, "r") 	
-	if tite then 
-		tite:close() 
-		gg.alert("Access is permanently locked due to backward time change.") 
-		os.exit() 
-	end 
-end 
-function IMPROAXE() 
-	IMPro() 
-	jawkksk()    
-	local permanentKeyFilePath= "/sdcard/download/accel2.txt"
-	local permanentKey= readKeyFromFile(permanentKeyFilePath)
-	if permanentKey == "" then
-	    permanentKey= "ACCCCCCCCA"
-	    saveKeyToFile(permanentKeyFilePath, permanentKey)
-	end
-	local xocodo1= readKeyFromFile("/sdcard/download/accel.txt")
-	local key 	
-	if xocodo1 ~= "" then  
-	    key= xocodo1
-	else  
-	    key= boboma()  
-	    saveKeyToFile("/sdcard/download/accel.txt", key)  
-	end    
-	local xocdj= os.date("*t") 
-	xocdj.month= xocdj.month + 1 
-	if xocdj.month > 12 then  
-		xocdj.month= 1  
-		xocdj.year= xocdj.year + 1  
-	end 
-	local ixkekemeDate= string.format("y%s/%s/%s", xocdj.year, string.format("%02d", xocdj.month), string.format("%02d", xocdj.day)) 
-	local combined= key .. "|" .. ixkekemeDate .. "|" .. permanentKey
-	local Axeceld= Axecel(combined) 
-	local naniabnod= nani_abno(Axeceld) 
-	_G.abnodKey= naniabnod  
-	_G.hssjxixi= key  
-end 
-function hssjxixjssjixkekeme(naniabnodKey)  
-	local Axeceld= nani_taekaba(naniabnodKey)  
-	if Axeceld == "" then  
-	    return  
-	end    
-	local burat= Pogiko(Axeceld)  
-	local key, ixkekemeDate, hssjxixi= burat:match("(.+)|(.+)|(.+)") 
-	
-	if not key or not ixkekemeDate or not hssjxixi then  
-	    gg.alert("Invalid key format.")  
-	    return  
-	end    	
-	local AXEHAC1= readKeyFromFile("/sdcard/download/accel.txt")  
-	local AXEHAC2= readKeyFromFile("/sdcard/download/accel2.txt")	
-	if AXEHAC1 ~= hssjxixi and AXEHAC2 ~= hssjxixi then  
-	    gg.alert("Your key does not match.")  
-	    return  
-	end    	
-	local year, month, day= ixkekemeDate:match("y(%d+)/(%d+)/(%d+)") 
-	if not year or not month or not day then  
-	    gg.alert("Invalid date format.")  
-	    return  
-	end    	
-	local ixkekeme= os.time({year= tonumber(year), month= tonumber(month), day= tonumber(day)}) 	
-	local xocdj= os.time() 	
-	if xocdj > ixkekeme then  
-	    gg.alert("Your key is expired.")  
-	else   
-	    local ixkekemeDateFormatted= string.format("%04d-%02d-%02d", tonumber(year), tonumber(month), tonumber(day))
-	    if hssjxixi == AXEHAC1 then
-	        gg.alert("Expiration Date: ".. ixkekemeDateFormatted .. "\nStatus: VIP")
-	    elseif hssjxixi == AXEHAC2 then
-	        gg.alert("Expiration Date: ".. ixkekemeDateFormatted .. "\nStatus: Free Version")
-	    end
-        
-	    return hssjxixi   
-	end   
-end 
-function AXECEBRO()
-function check(t) 
-    if t < 10 then 
-        return "0" .. t 
-    end
-    return t
-end
-local expiremessage = "Expired key"
-local Date = 30   
-local Month = 12    
-local Year = 2024
-local expiredate = Year .. check(Month) .. check(Date)
-local response = gg.makeRequest("http://www.guimp.com")
-local date = response.headers["Date"][1]
-local month = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
-local currentdate
-for i = 1, 12 do
-    if month[i] == string.sub(date, 9, 11) then
-        local monthNum = i < 10 and "0" .. i or i
-        currentdate = string.sub(date, 13, 16) .. monthNum .. string.sub(date, 6, 7)
-        break
-    end
-end
-if tonumber(currentdate) >= tonumber(expiredate) then 
-    gg.alert(expiremessage) 
-    os.exit() 
-end
+Main()
 
 gg.alert("ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʙʀɪxᴍᴏᴅᴢ")
 
@@ -2929,37 +2673,3 @@ if BrixMODZ == 1 then
 home() 
 end
 end
-end
-function xjekesjs()  
-	IMPro()    
-	local choice= gg.choice({"LOGIN", "COPY PHONE CODE", "RESET PHONE CODE"}, nil, "BRIXMODZ VIP LOADER V4") 	
-	if choice == 1 then   
-	    local useredjdjdj= gg.prompt({"Enter your key"}, nil, {"text"})   
-	    if useredjdjdj then   
-	        local naniabnodKey= useredjdjdj[1]   
-	        local hssjxixi= hssjxixjssjixkekeme(naniabnodKey)   
-	        if hssjxixi then   
-	            AXECEBRO()   
-	        end   
-	    else          
-	    end   
-	elseif choice == 2 then   
-	    if _G.hssjxixi then   
-	        gg.copyText(_G.hssjxixi)   
-	        gg.alert("Send to the Owner")   
-	    else   
-	        gg.alert("No additional key available. Please generate a key first.")   
-	    end   
-	elseif choice == 3 then   
-	    local IMPhj= gg.prompt({"Are you sure you want to reset the keys? Type 'YES' to confirm."}, nil, {"text"})     
-	    if IMPhj and IMPhj[1] == "YES" then     
-	        xehejd("/sdcard/download/accel.txt")     
-	        IMPROAXE()     
-	        gg.alert("The keys have been reset and a new one has been generated.")     
-	    else     
-	    end   
-	end  
-end  
-IMPROAXE()  
-xjekesjs()
-

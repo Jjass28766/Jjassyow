@@ -784,7 +784,7 @@ so = gg.getRangesList('libunity.so')[1].start
 py = 0x80DD184
 setValues(so + py, 32, "h4000001CC0035FD6")
 setValues(so + py + 4, 32, "hC0035FD600007A44")
-setValues(so + py + 8, 16, 1000)
+setValues(so + py + 8, 16, 1000000)
 gg.toast("SNOWBOARD SPEED ACTIVATED")
 end
 

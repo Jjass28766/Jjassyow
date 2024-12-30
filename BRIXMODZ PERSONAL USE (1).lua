@@ -118,6 +118,68 @@ end
          gg.alert(' 30days Key ','Yes') 
          else 
            gg.alert(' Wrong Key ') os.exit()
+end 
+       end 
+     end 
+   end 
+   end 
+   ms = aaaa*24*60*60 
+   Yz = ((os.time() + ms)*lqdm)+lqdm..'' 
+   Yza = Yz 
+   Yzb =io.open('/storage/emulated/0/Android/.49623513_1_dll','w') 
+   Yzb:write(Yza) 
+   Yzb:close() 
+   Yzb =io.open('/storage/emulated/0/.49623513_2','w') 
+   Yzb:write(100000000-(Yza-lqdm)) 
+   Yzb:close() 
+ else 
+   Yzb =io.open('/storage/emulated/0/.49623513_2','r') 
+   if Yzb == nil then 
+   os.remove("/storage/emulated/0/.49623513_2")     
+   os.remove("/storage/emulated/0/Android/.49623513_1_dll") 
+   os.remove("/storage/emulated/0/.49623513_1")     
+   os.remove("/storage/emulated/0/Android/.49623513_int") 
+   os.exit() 
+   end 
+   YZZZ=Yzb:read('*a') 
+   Yzb:close() 
+   Yzd=io.open('/storage/emulated/0/Android/.49623513_1_dll','r') 
+   Yzda=Yzd:read('*a') 
+   Yzd:close() 
+   YZYZ=Yzda-lqdm+YZZZ 
+   if YZYZ ~=100000000 then 
+   os.remove("/storage/emulated/0/.49623513_2")     
+   os.remove("/storage/emulated/0/Android/.49623513_1_dll") 
+   os.remove("/storage/emulated/0/.49623513_1")     
+   os.remove("/storage/emulated/0/Android/.49623513_int") 
+   print("Amazing Register Engine Script") 
+   os.exit() 
+   end 
+   Yzd=io.open('/storage/emulated/0/Android/.49623513_1_dll','r') 
+   Yzda=Yzd:read('*a') 
+   Yzd:close() 
+   Yzf = os.time() 
+   Yzda = (Yzda-lqdm)/lqdm 
+   YZZ = Yzda 
+   YZA = (Yzda - Yzf)/3600/24 
+   YZB = YZA*24*3600 
+    YZC = (Yzda - Yzf -YZB)/60/60 
+    YZD = YZC*3600 
+    YZE = (Yzda - Yzf -YZB - YZD)/60 
+    YZF = YZE*60 
+    YZG = Yzda - Yzf -YZB - YZD -YZF 
+   if Yzda > Yzf then gg.alert('Confirmed Expire Time: '.. YZA ..'d' .. YZC .. 'h' .. YZE .. 'm' .. YZG .. 's') 
+     else 
+       gg.alert('You need to buy key again!') 
+   os.remove("/storage/emulated/0/.49623513_2")     
+   os.remove("/storage/emulated/0/Android/.49623513_1_dll") 
+   os.remove("/storage/emulated/0/.49623513_1")     
+   os.remove("/storage/emulated/0/Android/.49623513_int") 
+       os.exit() 
+     end 
+ end 
+end 
+lq()
 
 gg.alert("ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʙʀɪxᴍᴏᴅᴢ")
 

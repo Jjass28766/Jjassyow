@@ -560,7 +560,7 @@ if e[6] == true then box3() end
 if e[7] == true then box4() end
 if e[8] == true then scope() end
 if e[9] == true then nopara() end
-if e[10] == true then slide() end
+if e[10] == true then slides() end
 if e[11] == true then esp() end
 if e[12] == true then current() end
 if e[13] == true then speed() end
@@ -662,11 +662,13 @@ function nopara()
   gg.toast("NO PARACHUTE ACTIVATED")
   end
 
-function slide()
-local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x8DD2B6C
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
-gg.toast("LONG SLIDE ACTIVATED")
+function slides()
+s = gg.prompt({"SLIDE SPEED ADJUSTABLE [1; 30]"}, nil, {"number"})
+unity = gg.getRangesList("libunity.so")[1].start 
+setValues(unity + 0x8DD2B6C, 4, "~A8 LDR S0, [PC,#0x8]")
+setValues(unity + 0x8DD2B6C + 4, 4, "~A8 RET")
+setValues(unity + 0x8DD2B6C + 8, 16, s[1])
+gg.toast("SLIDE SPEED ACTIVATED")
 end
 
 function esp()

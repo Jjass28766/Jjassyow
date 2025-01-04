@@ -2167,12 +2167,14 @@ b=gg.multiChoice({
 "SPECTRE MYTHIC",
 "NYX LEGEND",
 "DAME LEGEND",
+"DARK FIONA",
 }, nil, "CHARACTER SKINS")
 if b == nil then else
 if b[1] == true then c19() end
 if b[2] == true then c20() end
 if b[3] == true then c21() end
 if b[4] == true then c22() end
+if b[5] == true then c23() end
 end
 end
 
@@ -2247,6 +2249,22 @@ gg.clearResults()
 gg.toast("𝗗𝗔𝗠𝗘 𝗟𝗘𝗚𝗘𝗡𝗗 𝗖𝗛𝗔𝗥𝗔𝗖𝗧𝗘𝗥 𝗗𝗢𝗡𝗘")
 end
 
+function c23()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("710001101", gg.TYPE_DWORD)
+gg.getResults(10000)
+gg.editAll("710004858", gg.TYPE_DWORD)
+gg.clearResults()
+gg.searchNumber("710001102", gg.TYPE_DWORD)
+gg.getResults(10000)
+gg.editAll("710004859", gg.TYPE_DWORD)
+gg.clearResults()
+gg.searchNumber("710001103", gg.TYPE_DWORD)
+gg.getResults(10000)
+gg.editAll("710004860", gg.TYPE_DWORD)
+gg.alert("Skin Activated ✅")
+gg.clearResults()
+gg.toast("DARK FIONA ACTIVATED")
     
 function leg3()
 k = gg.choice({

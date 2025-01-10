@@ -467,130 +467,18 @@ end
 
 
 function lobby()
-HexPatches.BrixMODZ("libanort.so", 0x64A3B2, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xC63787, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x0FAA86, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x19511F, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x451E7E, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xEA3A7C, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x2CE139, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xD95EF8, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xF827BA, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xC47B3E, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x353A57, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xC1842F, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x82B67C, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x49C1D1, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xF28CE8, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xE8CBAD, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xCCC0AC, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x71233E, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x7ACDE1, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x160A67, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xCC2E21, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x22984B, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xA3D52A, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x424745, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x58E7E1, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x45E7F0, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x55BCAB, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x616A4D, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x79E1E3, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xEF1743, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xA74769, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x6C6958, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x15131F, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xD91F1B, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x6F8E3D, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x3A3C5C, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x33644C, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x08E75F, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x84671D, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xD0AA5F, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xAACC91, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x8454F7, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x0FDBFF, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x27C919, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x6131C4, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x236EE9, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xC4BFCC, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x1580B1, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0x6F9AEC, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x23F7EC, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x23FB08, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x24017C, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x24042C, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x24092C, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x240BA4, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x24282C, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x242994, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x242B58, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x2442C8, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x2CDF41, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x27B43C, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanogs.so", 0x2E4E10, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x217144, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x218E2C, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x2198C0, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x21A230, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x21B4A8, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x21BB64, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x21C6B8, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x21DE30, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x21E420, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x2297D8, "h 00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.BrixMODZ("libanogs.so", 0x26EEE4, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x174B50, "h 00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libanort.so", 0xEE0D2D, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x8660D9, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x701830, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x07FE9E, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x4B090F, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xCA55A6, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x9A8452, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xB264AF, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xF90250, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xE21D6B, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x261F85, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xA3A91E, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x14ADBE, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xB29010, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x1BB1CF, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xE094FF, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x94C31E, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x43B5AC, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x5F6007, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x322C2B, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x506969, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x7B63F6, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xDBF326, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xBE48A8, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x4E7785, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x31A004, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x757111, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x3CD04E, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x65E388, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x7D53CF, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x45C2DF, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xB3E913, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x9E964B, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x25741C, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x20DC48, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x2A5CFE, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xDD85A4, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x40EA03, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xFEA662, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x680ED7, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x0C98BA, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xB6AB5B, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xC60816, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x8308A4, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x20D744, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x6D9F2A, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x600858, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x43206C, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x101669, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0x4CBD49, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libunity.so", 0xE18E02, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0xE9203B, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0x2B2A70, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0x91E97B, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0xA71B1C, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0xE5EFC2, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0xEC9031, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0xA04377, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0xB7DD59, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0xB16852, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0xD0D0D8, "00 00 80 D2 C0 03 5F D6", 32);
 gg.toast("BYPASS AND ANTI CRASH ACTIVATED")
 end
 
@@ -1702,13 +1590,13 @@ end
 function aim()
 aimbot = gg.prompt({"ᴀɪᴍ ʟᴏᴄᴋ ᴀᴅᴊᴜsᴛ sᴇᴛᴛɪɴɢs [1; 1000000]"}, nil, {"number"})
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x8FE4058, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x8FE4058 + 4, 4, "~A8 RET")
-setValues(unity + 0x8FE4058 + 8, 16, aimbot[1])
+setValues(unity + 0x96F957C, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x96F957C + 4, 4, "~A8 RET")
+setValues(unity + 0x96F957C + 8, 16, aimbot[1])
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x7AED9F8, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
-setValues(unity + 0x7AED9F8 + 4, 4, "~A8 RET")
-setValues(unity + 0x7AED9F8 + 8, 16, aimbot[1])
+setValues(unity + 0x846BD34, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
+setValues(unity + 0x846BD34 + 4, 4, "~A8 RET")
+setValues(unity + 0x846BD34 + 8, 16, aimbot[1])
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.setVisible(false)
 gg.searchNumber("7.00649232e-45F;0.69999998808F;0.69999998808F;0.69999998808F;0.69999998808F;7.00649232e-45F;0.5F;0.5F;0.5F;0.60000002384F;0.60000002384F", gg.TYPE_FLOAT)
@@ -1844,13 +1732,13 @@ end
 function aimlock()
 aimbot = gg.prompt({"ᴀɪᴍ ʟᴏᴄᴋ ᴀᴅᴊᴜsᴛ sᴇᴛᴛɪɴɢs [1; 1000]"}, nil, {"number"})
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x8FE4058, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x8FE4058 + 4, 4, "~A8 RET")
-setValues(unity + 0x8FE4058 + 8, 16, aimbot[1])
+setValues(unity + 0x96F957C, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x96F957C + 4, 4, "~A8 RET")
+setValues(unity + 0x96F957C + 8, 16, aimbot[1])
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x7AED9F8, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
-setValues(unity + 0x7AED9F8 + 4, 4, "~A8 RET")
-setValues(unity + 0x7AED9F8 + 8, 16, aimbot[1])
+setValues(unity + 0x846BD34, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
+setValues(unity + 0x846BD34 + 4, 4, "~A8 RET")
+setValues(unity + 0x846BD34 + 8, 16, aimbot[1])
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.setVisible(false)
 gg.searchNumber("7.00649232e-45F;0.69999998808F;0.69999998808F;0.69999998808F;0.69999998808F;7.00649232e-45F;0.5F;0.5F;0.5F;0.60000002384F;0.60000002384F", gg.TYPE_FLOAT)
@@ -1899,7 +1787,7 @@ end
 
 function reload()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x8FC2374
+local py = 0x96D4868
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h002C40BCC0035FD6"}})
 gg.toast("NO RELOAD ACTIVATED")
 end

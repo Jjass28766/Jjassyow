@@ -705,14 +705,11 @@ end
 
 function wall()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x81B7858
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h 1F 20 03 D5 E0 03 13 AA"}})
-local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x8497D3C
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value =  "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x4A48B10
-gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local py = 0x5B6DAA8
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "~A8 NOP"}})
 gg.toast("WALLHACK RED/YELLOW/BLUE/OUTLINE ACTIVATED")
 end
 

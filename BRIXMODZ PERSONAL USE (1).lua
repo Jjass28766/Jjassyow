@@ -766,6 +766,15 @@ function esp()
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x83A69FC
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x4C5D4B8
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x4C5D28C
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x7279C3C
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("ESP NAME BR ACTIVATED")
 end
 

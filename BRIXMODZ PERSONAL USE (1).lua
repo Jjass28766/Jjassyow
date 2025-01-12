@@ -677,7 +677,7 @@ end
 
 function esp()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x4C5D28C
+local py = 0x83A69FC
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("ESP NAME BR ACTIVATED")
 end

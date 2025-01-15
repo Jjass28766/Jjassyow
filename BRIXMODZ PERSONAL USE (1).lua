@@ -455,7 +455,7 @@ BrixMODZ = -1
 end
 function A1() 
 w = gg.multiChoice({
-"BYPASS LOADING [ LOADING 99% ]",
+"BYPASS LOGO [GARENA]",
 "SKIP TUTORIAL [FOR NEW ACCOUNT]",
 },nil," PREMIUM V3  \nby: @brixmods ")
 if w == nil then else

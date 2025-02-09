@@ -533,8 +533,10 @@ e = gg.prompt({
 "• SNOWBOARD SPEED",
 "• WALK UNDERWATER",
 "• PUMP BOOST",
+"• SNOWBOARD SPEED V2",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -592,7 +594,8 @@ if e[23] == true then weaprange() end
 if e[24] == true then snowspeed() end
 if e[25] == true then water() end
 if e[26] == true then pump() end
-if e[27] == true then home() end
+if e[27] == true then snowv2() end
+if e[28] == true then home() end
 end
 end
 
@@ -841,6 +844,18 @@ so = gg.getRangesList('libunity.so')[1].start
 py = 0x70F440C
 setValues(so + py, 32, "h 20 00 80 D2 C0 03 5F D6")
 gg.toast("PUMP BOOST ACTIVATED")
+end
+
+function snowv2()
+speed = gg.prompt({"Snowboard boost ᴀᴅᴊᴜꜱᴛᴀʙʟᴇ [1; 1000]"}, nil, {"number"})
+if speed and speed[1] then
+so = gg.getRangesList('libunity.so')[1].start
+py = 0x5A9A074
+setValues(so + py, 32, "h4000001CC0035FD6")
+setValues(so + py + 4, 32, "hC0035FD600007A44")
+setValues(so + py + 8, 16, speed[1])
+gg.toast("sɴᴏᴡʙᴏᴀʀᴅ ʙᴏᴏsᴛ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+end
 end
 
 function A3() 

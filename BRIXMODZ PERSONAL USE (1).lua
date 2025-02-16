@@ -495,7 +495,6 @@ HexPatches.BrixMODZ("libanogs.so", 0x25F9BC, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x2AFB68, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x174B50, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libTDataMaster.so", 0x7C26E, "00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.BrixMODZ("libTDataMaster.so", 0x98EA0, "00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libTDataMaster.so", 0x73629, "00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libTDataMaster.so", 0x744C3, "00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libTDataMaster.so", 0x8594E, "00 00 80 D2 C0 03 5F D6", 32);

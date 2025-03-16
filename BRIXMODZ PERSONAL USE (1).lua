@@ -3127,7 +3127,7 @@ if j == nil then else
 if j[1] == true then x1() end
 if j[2] == true then x2() end
 if j[3] == true then x3() end
-if j[3] == true then x4() end
+if j[4] == true then x4() end
 end
 end
 		

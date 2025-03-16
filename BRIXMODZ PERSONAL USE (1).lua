@@ -2145,8 +2145,10 @@ l = gg.prompt({
 "• DLQ33 MYTHIC",
 "• GRAU MYTHIC",
 "• TYPE 19 MYTHIC",
+"• ODEN MYTHIC",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -2166,7 +2168,8 @@ if l[5] == true then ak47() end
 if l[6] == true then dlq() end
 if l[7] == true then grau() end
 if l[8] == true then type() end
-if l[9] == true then home() end
+if l[9] == true then oden() end
+if l[10] == true then home() end
 end
 end
   
@@ -2282,7 +2285,19 @@ gg.setRanges(32)
 gg.toast("TYPE 19 MYTHIC ACTIVATED")
 	end
 
-     
+     function oden()
+gg.setRanges(32)
+    ck1 = {{10125001, 0}, {39, -0x10}}
+    ck2 = {{100287, 0x4}, {10125002, 0x8}}
+    czk(ck1, ck2, 4) 
+    ck1 = {{10431201, 0}, {39, -0x10}}
+    ck2 = {{100287, 0x4}, {10125002, 0x8}}
+    czk(ck1, ck2, 4)
+    ck1 = {{10125001, 0}, {1880000001, 0x14}}
+    ck2 = {{400008, -0x20}, {200132, 0x24}, {500047, 0x28}}
+    czk(ck1, ck2, 4)
+gg.toast("ODEN MYTHIC ACTIVATED")
+	end
     
 function leg2()
 

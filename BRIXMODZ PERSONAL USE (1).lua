@@ -3121,13 +3121,17 @@ j=gg.multiChoice({
 "MYTHIC SIREN EXECUTION",
 "MYTHIC GHOST EXECUTION",
 "MYTHIC TEMPLAR EXECUTION",
-"PUNCH EXECUTIN",		
+"PUNCH EXECUTION",
+"MYTHIC SPECTRE EXECUTION",
+"MYTHIC SOFIA EXECUTION",
 }, nil, "EXECUTION SKINS")
 if j == nil then else
 if j[1] == true then x1() end
 if j[2] == true then x2() end
 if j[3] == true then x3() end
 if j[4] == true then x4() end
+if j[5] == true then x5() end
+if j[6] == true then x6() end
 end
 end
 		
@@ -3144,7 +3148,7 @@ gg.setRanges(32)
     ck1 = {{280500002, 0}, {3, 0x1C}}
     ck2 = {{5, 0x3C}}
     czk(ck1, ck2, 4) 
-gg.toast("SIREN EXECUTION ACTIVATED")
+gg.toast("GHOST EXECUTION ACTIVATED")
 end
 
 function x3()
@@ -3152,7 +3156,7 @@ gg.setRanges(32)
     ck1 = {{280500002, 0}, {3, 0x1C}}
     ck2 = {{2, 0x3C}}
     czk(ck1, ck2, 4) 
-gg.toast("SIREN EXECUTION ACTIVATED")
+gg.toast("TEMPLAR EXECUTION ACTIVATED")
 end
 
 function x4()
@@ -3161,6 +3165,22 @@ gg.setRanges(32)
     ck2 = {{7, 0x3C}}
     czk(ck1, ck2, 4) 
 gg.toast("PUNCH EXECUTION ACTIVATED")
+end
+
+function x5()
+gg.setRanges(32)
+    ck1 = {{280500002, 0}, {3, 0x1C}}
+    ck2 = {{6, 0x3C}}
+    czk(ck1, ck2, 4) 
+gg.toast("MYTHIC SPECTRE EXECUTION ACTIVATED")
+end
+
+function x6()
+gg.setRanges(32)
+    ck1 = {{280500002, 0}, {3, 0x1C}}
+    ck2 = {{8, 0x3C}}
+    czk(ck1, ck2, 4)
+gg.toast("MYTHIC SOFIA EXECUTION ACTIVATED")
 end
 		
 function EXIT()

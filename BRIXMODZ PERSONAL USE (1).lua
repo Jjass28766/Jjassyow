@@ -2124,12 +2124,14 @@ q = gg.choice({
 "MYTHIC GUNS",
 "CHARACTER SKINS",
 "LEG GUNS",
+"MYTHIC EXECUTION",
 
 },nil," PREMIUM V3  \nby: @brixmods ")
 if q == nil then else
 if q == 1 then mythic() end
 if q == 2 then leg2() end
 if q == 3 then leg3() end
+if q == 4 then leg4() end
 end
 end
 
@@ -3046,6 +3048,23 @@ function pistol()
  end
  end
 
+function leg4()
+j=gg.multiChoice({
+"MYTHIC SIREN EXECUTION",
+}, nil, "EXECUTION SKINS")
+if j == nil then else
+if j[1] == true then x1() end
+end
+end
+		
+function x1()
+gg.setRanges(32)
+    ck1 = {{280500002, 0}, {3, 0x1C}}
+    ck2 = {{4, 0x3C}}
+    czk(ck1, ck2, 4) 
+gg.toast("SIREN EXECUTION ACTIVATED")
+end
+		
 function EXIT()
 gg.toast("sᴄʀɪᴘᴛ ᴛᴇʀᴍɪɴᴀᴛᴇᴅ")
 os.exit() 

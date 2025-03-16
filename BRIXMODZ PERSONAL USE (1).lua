@@ -2143,8 +2143,12 @@ l = gg.prompt({
 "• UZI MYTHIC",
 "• AK47 MYTHIC",
 "• DLQ33 MYTHIC",
+"• GRAU MYTHIC",
+"• TYPE 19 MYTHIC",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
+    "checkbox",
+    "checkbox",
     "checkbox",
     "checkbox",
     "checkbox",
@@ -2160,7 +2164,9 @@ if l[3] == true then kilo() end
 if l[4] == true then uzi() end
 if l[5] == true then ak47() end
 if l[6] == true then dlq() end
-if l[7] == true then home() end
+if l[7] == true then grau() end
+if l[8] == true then type() end
+if l[9] == true then home() end
 end
 end
   
@@ -2247,7 +2253,35 @@ gg.setRanges(32)
 gg.toast("DLQ33 MYTHIC ACTIVATED")
 	end
 
-    
+
+function grau()
+gg.setRanges(32)
+    ck1 = {{10130001, 0}, {44, -0x10}}
+    ck2 = {{100846, 0x4}, {10130012, 0x8}}
+    czk(ck1, ck2, 4) 
+    ck1 = {{10130001, 0}, {44, -0x10}}
+    ck2 = {{100846, 0x4}, {10130012, 0x8}}
+    czk(ck1, ck2, 4)
+    ck1 = {{10130001, 0}, {1880000001, -0x14}}
+    ck2 = {{400017, 0x20}, {200231, 0x24}, {300221, 0x28}}
+    czk(ck1, ck2, 4)
+gg.toast("GRAU MYTHIC ACTIVATED")
+	end
+	
+function type()
+gg.setRanges(32)
+    ck1 = {{10132201, 0}, {46, -0x10}}
+    ck2 = {{100894, 0x4}, {10132002, 0x8}}
+    czk(ck1, ck2, 4) 
+    ck1 = {{10132201, 0}, {46, -0x10}}
+    ck2 = {{100894, 0x4}, {10132002, 0x8}}
+    czk(ck1, ck2, 4)
+    ck1 = {{10130001, 0}, {1880000001, -0x14}}
+    ck2 = {{400018, 0x20}, {200241, 0x24}, {300231, 0x28}}
+    czk(ck1, ck2, 4)
+gg.toast("TYPE 19 MYTHIC ACTIVATED")
+	end
+
      
     
 function leg2()

@@ -533,6 +533,7 @@ e = gg.prompt({
 "• SNOWBOARD SPEED",
 "• WALK UNDERWATER",
 "• PUMP BOOST",
+"• NORMAL LONG EXECUTION",
 "◻️ ʙᴀᴄᴋ", 
 }, nil, {
     "checkbox",
@@ -592,7 +593,8 @@ if e[23] == true then weaprange() end
 if e[24] == true then snowspeed() end
 if e[25] == true then water() end
 if e[26] == true then pump() end
-if e[27] == true then home() end
+if e[27] == true then xnor() end
+if e[28] == true then home() end
 end
 end
 
@@ -843,6 +845,23 @@ setValues(so + py, 32, "h 20 00 80 D2 C0 03 5F D6")
 gg.toast("PUMP BOOST ACTIVATED")
 end
 
+function xnor()
+local Lib = gg.getRangesList("libunity.so") 
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x490569C 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x4904538 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x4906158 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
+local py = 0x4902398 
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
+gg.toast("NORMAL LONG EXECUTION")
+end
+	
 function A3() 
 e = gg.prompt({
 "• SLIDE SPEED ADJUSTABLE [IN-GAME]",
@@ -2198,11 +2217,13 @@ gg.toast("UZI MYTHIC ACTIVATED")
 function leg2()
 
 b=gg.multiChoice({
-"TEMPLAR MYTHIC",
-"SPECTRE MYTHIC",
+"MYTHIC TEMPLAR",
+"MYTHIC SPECTRE",
 "NYX LEGEND",
 "DAME LEGEND",
 "DARK FIONA",
+"MYTHIC GHOST",
+"MYHIC SIREN",
 }, nil, "CHARACTER SKINS")
 if b == nil then else
 if b[1] == true then c19() end
@@ -2210,6 +2231,8 @@ if b[2] == true then c20() end
 if b[3] == true then c21() end
 if b[4] == true then c22() end
 if b[5] == true then c23() end
+if b[6] == true then c24() end
+if b[7] == true then c25() end
 end
 end
 
@@ -2301,7 +2324,40 @@ gg.alert("Skin Activated ✅")
 gg.clearResults()
 gg.toast("DARK FIONA ACTIVATED")
 	end
-    
+
+	function c24()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("710001101", gg.TYPE_DWORD)
+gg.getResults(10000)
+gg.editAll("710004376", gg.TYPE_DWORD)
+gg.clearResults()
+gg.searchNumber("71000102", gg.TYPE_DWORD)
+gg.getResults(10000)
+gg.editAll("710004374", gg.TYPE_DWORD)
+gg.clearResults()
+gg.searchNumber("710001103", gg.TYPE_DWORD)
+gg.getResults(10000)
+gg.editAll("710004375", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("MYTHIC GHOST ACTIVATED")
+	end
+	
+	function c25()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("710001101", gg.TYPE_DWORD)
+gg.getResults(10000)
+gg.editAll("710003838", gg.TYPE_DWORD)
+gg.clearResults()
+gg.searchNumber("710001102", gg.TYPE_DWORD)
+gg.getResults(10000)
+gg.editAll("710003837", gg.TYPE_DWORD)
+gg.clearResults()
+gg.searchNumber("710001103", gg.TYPE_DWORD)
+gg.getResults(10000)
+gg.editAll("710003836", gg.TYPE_DWORD)
+gg.clearResults()
+gg.toast("MYTHIC SIREN ACTIVATED")
+	end
 function leg3()
 k = gg.choice({
 "MELLE",

@@ -3087,11 +3087,13 @@ j=gg.multiChoice({
 "MYTHIC SIREN EXECUTION",
 "MYTHIC GHOST EXECUTION",
 "MYTHIC TEMPLAR EXECUTION",
+"PUNCH EXECUTIN",		
 }, nil, "EXECUTION SKINS")
 if j == nil then else
 if j[1] == true then x1() end
 if j[2] == true then x2() end
 if j[3] == true then x3() end
+if j[3] == true then x4() end
 end
 end
 		
@@ -3117,6 +3119,14 @@ gg.setRanges(32)
     ck2 = {{2, 0x3C}}
     czk(ck1, ck2, 4) 
 gg.toast("SIREN EXECUTION ACTIVATED")
+end
+
+function x4()
+gg.setRanges(32)
+    ck1 = {{280500002, 0}, {3, 0x1C}}
+    ck2 = {{7, 0x3C}}
+    czk(ck1, ck2, 4) 
+gg.toast("PUNCH EXECUTION ACTIVATED")
 end
 		
 function EXIT()

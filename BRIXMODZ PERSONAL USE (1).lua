@@ -625,7 +625,7 @@ local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x83FFDD0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value =  "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x5B6DAA8
+local py = 0x6622BD0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h 1F 20 03 D5 E0 03 13 AA"}})
 gg.toast("WALLHACK RED/YELLOW/BLUE/OUTLINE ACTIVATED")
 end

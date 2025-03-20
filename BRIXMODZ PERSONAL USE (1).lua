@@ -605,19 +605,19 @@ end
 function aimall()
 aimbot = gg.prompt({"ᴀɪᴍ ʟᴏᴄᴋ ᴀᴅᴊᴜsᴛ sᴇᴛᴛɪɴɢs [1; 1000]"}, nil, {"number"})
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x96F957C, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x96F957C + 4, 4, "~A8 RET")
-setValues(unity + 0x96F957C + 8, 16, aimbot[1])
+setValues(unity + 0x98887FC, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x98887FC + 4, 4, "~A8 RET")
+setValues(unity + 0x98887FC + 8, 16, aimbot[1])
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x846BD34, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
-setValues(unity + 0x846BD34 + 4, 4, "~A8 RET")
-setValues(unity + 0x846BD34 + 8, 16, aimbot[1])
+setValues(unity + 0x83D45A0, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
+setValues(unity + 0x83D45A0 + 4, 4, "~A8 RET")
+setValues(unity + 0x83D45A0 + 8, 16, aimbot[1])
 gg.toast("AIMBOT ALL GUNS ACTIVATED")
 end
 
 function wall()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x8497D3C
+local py = 0x83FFDD0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value =  "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
 local py = 0x5B6DAA8
@@ -627,65 +627,65 @@ end
 
 function spread()
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x8655FF8, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x8655FF8 + 4, 4, "~A8 RET")
-setValues(unity + 0x8655FF8 + 8, 16, -1)
+setValues(unity + 0x85BA160, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x85BA160 + 4, 4, "~A8 RET")
+setValues(unity + 0x85BA160 + 8, 16, -1)
 gg.toast("NO SPREAD ACTIVATED")
 end
 
 function box()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x96D4868
+local py = 0x986423C
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h002C40BCC0035FD6"}})
 gg.toast("NO RELOAD ACTIVATED")
 end
 
 function box2()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x8650ADC
+local py = 0x85B4CCC
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("EXPANDED HITBOX ACTIVATED'")
 end
 
 function box3()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x86578E4
+local py = 0x85BB9F0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h204C40BCC0035FD6"}})
 gg.toast("NO RECOIL ACTIVATED")
 end
 
 function box4()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x853C378
+local py = 0x84A3F34
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "hC00080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x853B6BC
+local py = 0x84A32A0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "hC00080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x853B1F8
+local py = 0x84A2DFC
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "hC00080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x853B7D4
+local py = 0x84A33B8
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x853B7D4
+local py = 0x84A3954
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x853BD78
+local py = 0x84A33B0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("SMOOTH FPS ACTIVATED")
 end
 
 function scope()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x96D2804
+local py = 0x9862290
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h002C40BCC0035FD6"}})
 gg.toast("FAST SCOPE ACTIVATED")
 end
 
 function nopara()
   local so = gg.getRangesList('libunity.so')[1].start
-  local py = 0x89B471C
+  local py = 0x8FB9A90
   gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
   gg.toast("NO PARACHUTE ACTIVATED")
   end
@@ -693,102 +693,111 @@ function nopara()
 function slides()
 s = gg.prompt({"SLIDE SPEED ADJUSTABLE [1; 30]"}, nil, {"number"})
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x89D2A94, 4, "~A8 LDR S0, [PC,#0x8]")
-setValues(unity + 0x89D2A94 + 4, 4, "~A8 RET")
-setValues(unity + 0x89D2A94 + 8, 16, s[1])
+setValues(unity + 0x8FD7C78, 4, "~A8 LDR S0, [PC,#0x8]")
+setValues(unity + 0x8FD7C78 + 4, 4, "~A8 RET")
+setValues(unity + 0x8FD7C78 + 8, 16, s[1])
 gg.toast("SLIDE SPEED ACTIVATED")
 end
 
 function esp()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x83A69FC
+local py = 0x5770E24
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x4C5D4B8
+local py = 0x5771040
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x4C5D28C
+local py = 0x80DBE84
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x7279C3C
+local py = 0x7453C9C
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x8A54924
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x89A46A8
+gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start
+local py = 0x8B13010
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("ESP NAME BR ACTIVATED")
 end
 
 function current()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x4939560
+local py = 0x544CD4C
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x493959C
+local py = 0x544CD88
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("UNLI CURRENT AMMO")
 end
 
 function speed()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x5AACB48
+local py = 0x65646BC
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("SPEEDWALK ACTIVATED")
 end
 
 function rapid()
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x96D3AD8, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x96D3AD8 + 4, 4, "~A8 RET")
-setValues(unity + 0x96D3AD8 + 8, 16, 10)
+setValues(unity + 0x98634F4, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x98634F4 + 4, 4, "~A8 RET")
+setValues(unity + 0x98634F4 + 8, 16, 10)
 gg.toast("RAPID FIRE ACTIVATED")
 end
    
 function fastswim()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x5B94CCC
+local py = 0x6649A54
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
 gg.toast("FAST SWIM ACTIVATED")
 end
 
 function aimsmall()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x864E300
+local py = 0x85B2528
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x864E3F0
+local py = 0x85B2618
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("AIM WITH CROSSHAIR ACTIVATED")
 end
 
 function infinite()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x89D2BC8
+local py = 0x8FD7DAC
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("INFINITE SLIDE ACTIVATED")
 end
 
 function spam()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x5A95374
+local py = 0x654C624
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("SPAM JUMP ACTIVATED")
 end
 
 function sw()
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x96D5410, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x96D5410 + 4, 4, "~A8 RET")
-setValues(unity + 0x96D5410 + 8, 16, 0)
+setValues(unity + 0x9864DE4, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x9864DE4 + 4, 4, "~A8 RET")
+setValues(unity + 0x9864DE4 + 8, 16, 0)
 gg.toast("FAST SWITCH ACTIVATED")
 end
 
 function buff()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x861E394
+local py = 0x85831F4
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("BUFF DAMAGE ACTIVATED")
 end
 
 function shake()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x844C31C
+local py = 0x83B5234
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}}) 
 gg.toast("NO SHAKE ACTIVATED")
 end
@@ -796,19 +805,19 @@ end
 function execution()
 local Lib = gg.getRangesList("libunity.so") 
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x490569C 
+local py = 0x54199FC 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x4904538 
+local py = 0x54188E0 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x4906158 
+local py = 0x541A49C 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x4902398 
+local py = 0x541679C 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x70BF564 
+local py = 0x7289B78 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("LONG EXECUTION ACTIVATED")
 end

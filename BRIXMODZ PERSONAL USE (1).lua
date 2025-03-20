@@ -824,15 +824,15 @@ end
 
 function weaprange()
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x96D6444, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x96D6444 + 4, 4, "~A8 RET")
-setValues(unity + 0x96D6444 + 8, 16, 10)
+setValues(unity + 0x9865E00, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x9865E00 + 4, 4, "~A8 RET")
+setValues(unity + 0x9865E00 + 8, 16, 10)
 gg.toast("EXTENDED RANGE ACTIVATED")
 end
 
 function snowspeed()
 so = gg.getRangesList('libunity.so')[1].start
-py = 0x5A9A074
+py = 0x655206C
 setValues(so + py, 32, "h4000001CC0035FD6")
 setValues(so + py + 4, 32, "hC0035FD600007A44")
 setValues(so + py + 8, 16, 1000000)
@@ -840,20 +840,20 @@ gg.toast("SNOWBOARD SPEED ACTIVATED")
 end
 function water()
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x5A492D4 
+local py = 0x6500F9C 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x5A65F6C
+local py = 0x651D6E0
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x5B967F8 
+local py = 0x664B520 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 gg.toast("WALK UNDERWATER ACTIVATED")
 	end
 	
 function pump()
 so = gg.getRangesList('libunity.so')[1].start 
-py = 0x70F440C
+py = 0x72BE95C
 setValues(so + py, 32, "h 20 00 80 D2 C0 03 5F D6")
 gg.toast("PUMP BOOST ACTIVATED")
 end
@@ -861,17 +861,18 @@ end
 function xnor()
 local Lib = gg.getRangesList("libunity.so") 
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x490569C 
+local py = 0x54199FC 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x4904538 
+local py = 0x54188E0 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x4906158 
+local py = 0x541A49C 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h200080D2C0035FD6"}})
 local so = gg.getRangesList('libunity.so')[1].start 
-local py = 0x4902398 
+local py = 0x541679C 
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h000080D2C0035FD6"}})
+local so = gg.getRangesList('libunity.so')[1].start 
 gg.toast("NORMAL LONG EXECUTION")
 end
 	
@@ -1656,13 +1657,13 @@ end
 function aim()
 aimbot = gg.prompt({"ᴀɪᴍ ʟᴏᴄᴋ ᴀᴅᴊᴜsᴛ sᴇᴛᴛɪɴɢs [1; 1000000]"}, nil, {"number"})
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x96F957C, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x96F957C + 4, 4, "~A8 RET")
-setValues(unity + 0x96F957C + 8, 16, aimbot[1])
+setValues(unity + 0x98887FC, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x98887FC + 4, 4, "~A8 RET")
+setValues(unity + 0x98887FC + 8, 16, aimbot[1])
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x846BD34, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
-setValues(unity + 0x846BD34 + 4, 4, "~A8 RET")
-setValues(unity + 0x846BD34 + 8, 16, aimbot[1])
+setValues(unity + 0x83D45A0, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
+setValues(unity + 0x83D45A0 + 4, 4, "~A8 RET")
+setValues(unity + 0x83D45A0 + 8, 16, aimbot[1])
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.setVisible(false)
 gg.searchNumber("7.00649232e-45F;0.69999998808F;0.69999998808F;0.69999998808F;0.69999998808F;7.00649232e-45F;0.5F;0.5F;0.5F;0.60000002384F;0.60000002384F", gg.TYPE_FLOAT)
@@ -1798,13 +1799,13 @@ end
 function aimlock()
 aimbot = gg.prompt({"ᴀɪᴍ ʟᴏᴄᴋ ᴀᴅᴊᴜsᴛ sᴇᴛᴛɪɴɢs [1; 1000]"}, nil, {"number"})
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x96F957C, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x96F957C + 4, 4, "~A8 RET")
-setValues(unity + 0x96F957C + 8, 16, aimbot[1])
+setValues(unity + 0x98887FC, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x98887FC + 4, 4, "~A8 RET")
+setValues(unity + 0x98887FC + 8, 16, aimbot[1])
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x846BD34, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
-setValues(unity + 0x846BD34 + 4, 4, "~A8 RET")
-setValues(unity + 0x846BD34 + 8, 16, aimbot[1])
+setValues(unity + 0x83D45A0, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
+setValues(unity + 0x83D45A0 + 4, 4, "~A8 RET")
+setValues(unity + 0x83D45A0 + 8, 16, aimbot[1])
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.setVisible(false)
 gg.searchNumber("7.00649232e-45F;0.69999998808F;0.69999998808F;0.69999998808F;0.69999998808F;7.00649232e-45F;0.5F;0.5F;0.5F;0.60000002384F;0.60000002384F", gg.TYPE_FLOAT)
@@ -1853,7 +1854,7 @@ end
 
 function reload()
 local so = gg.getRangesList('libunity.so')[1].start
-local py = 0x96D4868
+local py = 0x986423C
 gg.setValues({{address = so + py, flags = gg.TYPE_QWORD, value = "h002C40BCC0035FD6"}})
 gg.toast("NO RELOAD ACTIVATED")
 end

@@ -487,7 +487,7 @@ HexPatches.BrixMODZ("libanogs.so", 0x2CDCF4, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x25F9BC, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x2AFB68, "h 00 00 80 D2 C0 03 5F D6", 32);
 HexPatches.BrixMODZ("libanogs.so", 0x174B50, "h 00 00 80 D2 C0 03 5F D6", 32);
-gg.toast"BYPASS AND ANTI CRASH ACTIVATED")
+gg.toast("BYPASS AND ANTI CRASH ACTIVATED")
 end
 
 

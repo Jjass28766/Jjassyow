@@ -594,13 +594,13 @@ end
 function aimall()
 aimbot = gg.prompt({"ᴀɪᴍ ʟᴏᴄᴋ ᴀᴅᴊᴜsᴛ sᴇᴛᴛɪɴɢs [1; 1000]"}, nil, {"number"})
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x98887FC, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
-setValues(unity + 0x98887FC + 4, 4, "~A8 RET")
-setValues(unity + 0x98887FC + 8, 16, aimbot[1])
+setValues(unity + 0x9F3FD30, 4, "~A8 LDR S0, [PC,#0x8]") --Sniper, Shotgun
+setValues(unity + 0x9F3FD30 + 4, 4, "~A8 RET")
+setValues(unity + 0x9F3FD30 + 8, 16, aimbot[1])
 unity = gg.getRangesList("libunity.so")[1].start 
-setValues(unity + 0x83D45A0, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
-setValues(unity + 0x83D45A0 + 4, 4, "~A8 RET")
-setValues(unity + 0x83D45A0 + 8, 16, aimbot[1])
+setValues(unity + 0x6ADFCA8, 4, "~A8 LDR S0, [PC,#0x8]") --AR, Smg, Lmg, Pistol
+setValues(unity + 0x6ADFCA8 + 4, 4, "~A8 RET")
+setValues(unity + 0x6ADFCA8 + 8, 16, aimbot[1])
 gg.toast("AIMBOT ALL GUNS ACTIVATED")
 end
 
